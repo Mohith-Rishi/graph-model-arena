@@ -14,10 +14,10 @@ Graph Model Arena is a competitive AI playground where 4-8 AI models compete sim
 - **Turn**: A discrete time step in which each model selects and executes one move
 - **Starting_Node**: The fixed node where all models begin the game
 - **Ending_Node**: The target node that models must reach to finish the game
-- **Trap_Node**: A node that eliminates a model from the game upon entry
+- **Trap_Node**: A node that causes a model to respawn (at checkpoint or Starting_Node) with a score penalty upon entry
 - **Clue_Node**: A node that reveals partial information about the graph to the visiting model
 - **Map_Node**: A node that reveals the graph structure up to a configurable neighbor depth for the visiting model
-- **Checkpoint_Node**: A node that saves a model's progress, allowing respawn at the checkpoint instead of the start upon elimination
+- **Checkpoint_Node**: A node that saves a model's progress, allowing respawn at the checkpoint instead of the Starting_Node upon entering a trap
 - **Points_Node**: A node that awards score points to the visiting model
 - **Obstacle**: A blocked edge or node that prevents traversal
 - **Visibility**: The portion of the graph a model can currently perceive
@@ -45,7 +45,7 @@ Graph Model Arena is a competitive AI playground where 4-8 AI models compete sim
 
 #### Acceptance Criteria
 
-1. WHEN a model enters a Trap_Node, THE Game_Engine SHALL eliminate that model from the game unless the model has an active checkpoint
+1. WHEN a model enters a Trap_Node without an active checkpoint, THE Game_Engine SHALL respawn that model at the Starting_Node and deduct a configurable death penalty from the model's score
 2. WHEN a model enters a Trap_Node and has an active checkpoint, THE Game_Engine SHALL respawn the model at the most recent Checkpoint_Node and deduct a configurable point penalty
 3. WHEN a model enters a Clue_Node, THE Game_Engine SHALL reveal information about one randomly selected neighboring node's type to that model only
 4. WHEN a model enters a Map_Node, THE Game_Engine SHALL reveal the graph structure within a configurable depth (1-3 edges) from the Map_Node to that model only
@@ -71,7 +71,7 @@ Graph Model Arena is a competitive AI playground where 4-8 AI models compete sim
 
 #### Acceptance Criteria
 
-1. WHEN a turn begins, THE Game_Engine SHALL request a move decision from each active (non-eliminated) model simultaneously
+1. WHEN a turn begins, THE Game_Engine SHALL request a move decision from each active (non-finished) model simultaneously
 2. WHEN a model submits a move, THE Game_Engine SHALL validate that the target node is adjacent to the model's current position and the connecting edge is not obstructed by an obstacle
 3. IF a model submits an invalid move, THEN THE Game_Engine SHALL keep the model at its current position and deduct one point as a penalty
 4. WHEN all active models have submitted moves for a turn, THE Game_Engine SHALL resolve all moves simultaneously and update game state
@@ -87,9 +87,9 @@ Graph Model Arena is a competitive AI playground where 4-8 AI models compete sim
 1. THE Game_Engine SHALL initialize each model's score to zero at the start of a game
 2. WHEN a model collects points from a Points_Node, THE Game_Engine SHALL add the node's configured point value (1-10) to the model's score
 3. WHEN a model reaches the Ending_Node, THE Game_Engine SHALL award a completion bonus calculated as: max_turns minus turns_taken, multiplied by a configurable bonus multiplier
-4. WHEN a model is eliminated by a Trap_Node without a checkpoint, THE Game_Engine SHALL record the model's final score as the score at time of elimination minus a configurable death penalty
+4. WHEN a model is respawned at the Starting_Node after entering a Trap_Node without a checkpoint, THE Game_Engine SHALL deduct a configurable death penalty from the model's score
 5. WHEN a game ends, THE Game_Engine SHALL rank all models by final score in descending order, with ties broken by fewer turns taken
-6. WHEN a game ends, THE Game_Engine SHALL produce a game summary containing each model's final score, rank, path taken, nodes visited, and cause of termination
+6. WHEN a game ends, THE Game_Engine SHALL produce a game summary containing the full graph, each model's final score, rank, path taken, nodes visited, and cause of termination
 
 ### Requirement 6: Model Interface
 
@@ -111,7 +111,7 @@ Graph Model Arena is a competitive AI playground where 4-8 AI models compete sim
 
 1. WHEN a game is created, THE Game_Engine SHALL accept a configuration specifying: number of nodes, edge density, node property probabilities, number of models, max turns, and timeout per move
 2. WHEN a game is started, THE Game_Engine SHALL generate the graph, place all models at the Starting_Node, and begin turn processing
-3. WHEN all active models have either reached the Ending_Node or been eliminated, THE Game_Engine SHALL end the game
+3. WHEN all active models have reached the Ending_Node, THE Game_Engine SHALL end the game
 4. IF the maximum turn limit is reached, THEN THE Game_Engine SHALL end the game and score remaining active models based on their proximity to the Ending_Node
 5. WHEN a game ends, THE Game_Engine SHALL serialize the complete game state (graph, all moves, all scores, all events) to a structured format for future analysis
 

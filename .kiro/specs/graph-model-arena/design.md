@@ -96,7 +96,7 @@ start_game(game: Game) -> GameResult
 - Accept game configuration and initialize all subsystems
 - Coordinate turn execution
 - Track game state across turns
-- Detect end conditions (all models finished/eliminated, max turns reached)
+- Detect end conditions (all models finished, max turns reached)
 - Produce final rankings and game summary
 
 ### 3. Turn Manager
@@ -140,7 +140,8 @@ resolve_moves(moves: list[ValidatedMove], game_state: GameState) -> GameState
 **Responsibilities:**
 - Move models to their target nodes simultaneously
 - Trigger node effects in order: checkpoint activation, trap check, clue reveal, map reveal, points collection
-- Update model states (position, score, visibility, alive/dead, checkpoint)
+- Update model states (position, score, visibility, checkpoint)
+- Handle trap respawn: reposition model to checkpoint or Starting_Node as appropriate
 
 ### 6. Node Effect Processor
 
@@ -153,7 +154,7 @@ process_node_effect(model_state: ModelState, node: Node, game_state: GameState) 
 
 **Responsibilities:**
 - Apply checkpoint: record as active respawn point
-- Apply trap: eliminate model or respawn at checkpoint with penalty
+- Apply trap: respawn at checkpoint with penalty (if checkpoint active), or respawn at Starting_Node with death penalty (if no checkpoint)
 - Apply clue: reveal one random neighbor's type
 - Apply map: expand visibility by configured depth
 - Apply points: add points if first visit, zero if revisit
@@ -214,7 +215,7 @@ Produces structured output after game completion.
 **Interface:**
 ```
 generate_summary(game: Game) -> GameSummary
-serialize_game(game: Game) -> dict
+serialize_game(game: Game) -> dict  # includes full graph, all moves, scores, events
 ```
 
 ## Data Models
@@ -282,13 +283,13 @@ ModelState:
     strategy_name: str
     current_node: str
     score: int
-    is_alive: bool
     has_finished: bool
     active_checkpoint: str or None
     visited_nodes: set of str
     visible_nodes: set of str
     visible_edges: set of (str, str)
     turns_taken: int
+    trap_deaths: int (number of times respawned from traps)
 ```
 
 ### GameState
@@ -307,13 +308,14 @@ GameState:
 GameEvent:
     turn: int
     model_id: str
-    event_type: enum (MOVE, TRAP_DEATH, TRAP_RESPAWN, CLUE_RECEIVED, MAP_REVEALED, POINTS_COLLECTED, CHECKPOINT_ACTIVATED, INVALID_MOVE, TIMEOUT, GAME_FINISHED, GAME_ENDED_BY_TURN_LIMIT)
+    event_type: enum (MOVE, TRAP_RESPAWN_START, TRAP_RESPAWN_CHECKPOINT, CLUE_RECEIVED, MAP_REVEALED, POINTS_COLLECTED, CHECKPOINT_ACTIVATED, INVALID_MOVE, TIMEOUT, GAME_FINISHED, GAME_ENDED_BY_TURN_LIMIT)
     details: dict
 ```
 
 ### GameSummary
 ```
 GameSummary:
+    graph: Graph (full graph including all nodes, edges, and properties)
     rankings: list of RankedModel
     total_turns: int
     graph_stats: dict (num_nodes, num_edges, num_traps, etc.)
@@ -326,7 +328,7 @@ RankedModel:
     final_score: int
     turns_taken: int
     nodes_visited: int
-    cause_of_termination: enum (FINISHED, ELIMINATED, TURN_LIMIT)
+    cause_of_termination: enum (FINISHED, TURN_LIMIT)
     path: list of str
 ```
 
@@ -365,9 +367,9 @@ RankedModel:
 
 **Validates: Requirements 1.4**
 
-### Property 6: Trap elimination without checkpoint
+### Property 6: Trap respawn at start without checkpoint
 
-*For any* model without an active checkpoint that enters a Trap_Node, the model SHALL be marked as eliminated (is_alive = false) and the model's final score SHALL equal score_at_death minus the configured death_penalty.
+*For any* model without an active checkpoint that enters a Trap_Node, the model SHALL remain alive, be repositioned at the Starting_Node, and the model's score SHALL be reduced by the configured death_penalty.
 
 **Validates: Requirements 2.1, 5.4**
 
@@ -457,7 +459,7 @@ RankedModel:
 
 ### Property 21: Game summary completeness
 
-*For any* completed game, the game summary SHALL contain each model's final score, rank, path taken, nodes visited, and cause of termination.
+*For any* completed game, the game summary SHALL contain the full graph, each model's final score, rank, path taken, nodes visited, and cause of termination.
 
 **Validates: Requirements 5.6**
 
@@ -473,9 +475,9 @@ RankedModel:
 
 **Validates: Requirements 6.4**
 
-### Property 24: Game ends when no active models remain
+### Property 24: Game ends when all models have finished
 
-*For any* game state where all models have either finished or been eliminated, the game SHALL end.
+*For any* game state where all models have reached the Ending_Node, the game SHALL end.
 
 **Validates: Requirements 7.3**
 
@@ -522,7 +524,7 @@ Unit tests cover specific examples, edge cases, and error conditions:
 
 - Graph generation with minimum (20) and maximum (200) node counts
 - Graph generation with zero obstacle density and maximum obstacle density
-- Trap node interaction with and without checkpoints
+- Trap node respawn at Starting_Node without checkpoint and at checkpoint with checkpoint
 - Points collection on first visit vs. revisit
 - Move validation with adjacent, non-adjacent, and obstructed edges
 - Completion bonus calculation with specific turn counts
@@ -541,7 +543,7 @@ Each property test:
 
 Property tests are organized by component:
 1. **Graph Generator properties** (Properties 1-5): Generate random GraphConfigs, produce graphs, verify invariants
-2. **Node effect properties** (Properties 6-11): Generate random game states with models at various node types, verify state transitions
+2. **Node effect properties** (Properties 6-11): Generate random game states with models at various node types, verify respawn and state transitions
 3. **Visibility properties** (Properties 12-14): Generate random game states, perform moves, verify visibility expansion
 4. **Turn mechanics properties** (Properties 15-19): Generate random moves (valid/invalid), verify validation and resolution
 5. **Scoring and ranking properties** (Properties 20-21): Generate random game results, verify ranking and summary
