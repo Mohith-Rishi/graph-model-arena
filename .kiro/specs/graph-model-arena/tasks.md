@@ -59,11 +59,11 @@ Implement the Graph Model Arena in Python as a standalone package. Uses `datacla
     - `compute_final_rankings(model_states) -> list[RankedModel]` — sort by score desc, ties by turns asc
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5_
 
-  - [ ]* 3.3 Write property test for points collection
+  - [x] 3.3 Write property test for points collection
     - **Property 11: Points collection — first visit vs. revisit**
     - **Validates: Requirements 2.6, 2.7, 5.2**
 
-  - [ ]* 3.4 Write property test for final ranking correctness
+  - [x] 3.4 Write property test for final ranking correctness
     - **Property 20: Final ranking correctness**
     - **Validates: Requirements 5.5**
 
@@ -83,7 +83,7 @@ Implement the Graph Model Arena in Python as a standalone package. Uses `datacla
     - Return valid/invalid with reason
     - _Requirements: 4.2_
 
-  - [ ]* 4.3 Write property tests for node effects (Properties 6-10)
+  - [x] 4.3 Write property tests for node effects (Properties 6-10)
     - **Property 6: Trap respawn at start without checkpoint**
     - **Property 7: Trap respawn with checkpoint**
     - **Property 8: Clue node reveals exactly one neighbor's type**
@@ -91,7 +91,7 @@ Implement the Graph Model Arena in Python as a standalone package. Uses `datacla
     - **Property 10: Checkpoint activation**
     - **Validates: Requirements 2.1, 2.2, 2.3, 2.4, 2.5, 3.3, 3.4, 5.4**
 
-  - [ ]* 4.4 Write property test for move validation
+  - [x] 4.4 Write property test for move validation
     - **Property 15: Move validation correctness**
     - **Validates: Requirements 4.2**
 
@@ -116,7 +116,7 @@ Implement the Graph Model Arena in Python as a standalone package. Uses `datacla
     - Increment turn counter
     - _Requirements: 4.1, 4.2, 4.3, 4.5, 4.6, 6.5_
 
-  - [ ]* 6.3 Write property tests for turn mechanics (Properties 16-19)
+  - [x] 6.3 Write property tests for turn mechanics (Properties 16-19)
     - **Property 16: Invalid move penalty**
     - **Property 17: Simultaneous move resolution is order-independent**
     - **Property 18: Completion bonus calculation**
@@ -138,7 +138,7 @@ Implement the Graph Model Arena in Python as a standalone package. Uses `datacla
     - `deserialize_game(data: dict) -> GameState` — reconstruct game state from serialized data
     - _Requirements: 5.6, 7.5_
 
-  - [ ]* 7.3 Write property tests for game lifecycle and serialization (Properties 12, 21-26)
+  - [x] 7.3 Write property tests for game lifecycle and serialization (Properties 12, 21-26)
     - **Property 12: Initialization invariant**
     - **Property 21: Game summary completeness**
     - **Property 22: Unique model identifiers**
@@ -167,11 +167,11 @@ Implement the Graph Model Arena in Python as a standalone package. Uses `datacla
     - `balanced_strategist.py` — Balanced_Strategist: switch between explore/collect/goal-seek based on turn count and score
     - _Requirements: 8.1, 8.2, 8.3, 8.4, 8.5, 8.6, 8.7, 8.8_
 
-  - [ ]* 9.3 Write property test for model strategy validity
+  - [x] 9.3 Write property test for model strategy validity
     - **Property 27: All model strategies produce valid moves**
     - **Validates: Requirements 8.1, 8.2, 8.3, 8.4, 8.5, 8.6, 8.7, 8.8**
 
-  - [ ]* 9.4 Write property tests for visibility (Properties 13-14)
+  - [x] 9.4 Write property tests for visibility (Properties 13-14)
     - **Property 13: Movement expands visibility**
     - **Property 14: ModelView accuracy**
     - **Validates: Requirements 3.2, 3.5, 6.1**
@@ -183,7 +183,7 @@ Implement the Graph Model Arena in Python as a standalone package. Uses `datacla
     - Serialize final game state to JSON file
     - _Requirements: 7.1, 7.2, 7.5_
 
-  - [ ]* 10.2 Write integration tests
+  - [x] 10.2 Write integration tests
     - Run a full game with minimum config (20 nodes, 2 models, low turns) and verify summary structure
     - Run a game where a model hits a trap without checkpoint and verify respawn at Starting_Node
     - Run a game where a model hits a trap with checkpoint and verify respawn at checkpoint
