@@ -251,3 +251,80 @@ docker run --rm --entrypoint pytest graph-model-arena -v
 ```
 
 Game results are persisted to the host via a volume mount in the Compose setup, so `game_results.json` stays updated between runs.
+
+## Frontend Visualization
+
+An optional React single-page application that visualizes completed game results as an interactive graph. Upload your `game_results.json` file and explore games turn by turn with playback controls, a live scoreboard, and an event log.
+
+### Features
+
+- Force-directed graph rendering with color-coded node types and edge styles
+- Turn-by-turn playback with variable speed (1x–4x)
+- Player markers showing positions on the graph at each turn
+- Scoreboard tracking scores and rankings in real time
+- Event log with click-to-jump navigation
+- Node highlight animation when events occur
+- Responsive layout (stacks on mobile, side-by-side on desktop)
+
+### Setup
+
+Requires Node.js 18+ and npm.
+
+```bash
+cd frontend
+npm install
+```
+
+### Running
+
+```bash
+cd frontend
+npm run dev
+```
+
+Opens at `http://localhost:5173`. Upload a `game_results.json` file to start visualizing.
+
+### Running Tests
+
+```bash
+cd frontend
+npm test
+```
+
+### Building for Production
+
+```bash
+cd frontend
+npm run build
+```
+
+Output goes to `frontend/dist/` — serve it with any static file server.
+
+### Project Structure
+
+```
+frontend/
+├── src/
+│   ├── components/          # React UI components
+│   │   ├── FileUploader.jsx
+│   │   ├── GameSelector.jsx
+│   │   ├── GraphCanvas.jsx
+│   │   ├── PlaybackControls.jsx
+│   │   ├── Scoreboard.jsx
+│   │   ├── EventLog.jsx
+│   │   └── PlayerLegend.jsx
+│   ├── context/
+│   │   └── GameContext.jsx  # State management (useReducer)
+│   ├── utils/
+│   │   ├── parseGameData.js        # JSON parser and validator
+│   │   └── computeTurnSnapshots.js # Turn state derivation
+│   ├── constants/
+│   │   └── colors.js        # Node and player color palettes
+│   ├── App.jsx              # Root component with routing
+│   └── main.jsx             # Entry point
+├── package.json
+├── vite.config.js
+└── index.html
+```
+
+The frontend has zero coupling to the Python backend — it only reads the `game_results.json` file format produced by the game engine.

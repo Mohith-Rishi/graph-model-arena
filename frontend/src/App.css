@@ -1,0 +1,99 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.App h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.upload-section {
+  text-align: center;
+}
+
+.back-btn {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f5f5f5;
+}
+
+.back-btn:hover {
+  background: #e0e0e0;
+}
+
+/* Responsive layout for game visualization */
+.game-visualization {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .game-visualization {
+    flex-direction: row;
+  }
+
+  .main-panel {
+    flex: 7;
+    min-width: 0;
+  }
+
+  .side-panel {
+    flex: 3;
+    min-width: 0;
+  }
+}
+
+/* PlayerLegend styles */
+.player-legend {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem;
+}
+
+.player-legend h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.player-legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+.legend-swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.legend-name {
+  font-size: 0.875rem;
+}
