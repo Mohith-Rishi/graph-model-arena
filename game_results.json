@@ -1,0 +1,7878 @@
+[
+  {
+    "game_id": "47e1bb96-d664-4890-a86a-6c5225de70a0",
+    "timestamp": "2026-06-26T09:44:14.493174+00:00",
+    "config": {
+      "graph_config": {
+        "num_nodes": 30,
+        "edge_density": 0.3,
+        "trap_probability": 0.1,
+        "clue_probability": 0.1,
+        "map_probability": 0.1,
+        "checkpoint_probability": 0.1,
+        "points_probability": 0.2,
+        "obstacle_density": 0.1,
+        "map_reveal_depth": 2,
+        "min_point_value": 1,
+        "max_point_value": 10
+      },
+      "num_models": 4,
+      "max_turns": 50,
+      "move_timeout_seconds": 5.0,
+      "completion_bonus_multiplier": 1.0,
+      "death_penalty": 10,
+      "invalid_move_penalty": 1,
+      "trap_respawn_penalty": 5
+    },
+    "rankings": [
+      {
+        "rank": 1,
+        "model_id": "Random_Walker",
+        "strategy_name": "RandomWalker",
+        "final_score": 56,
+        "turns_taken": 50,
+        "nodes_visited": 26,
+        "cause_of_termination": "TURN_LIMIT"
+      },
+      {
+        "rank": 2,
+        "model_id": "Greedy_Explorer",
+        "strategy_name": "GreedyExplorer",
+        "final_score": 55,
+        "turns_taken": 4,
+        "nodes_visited": 4,
+        "cause_of_termination": "FINISHED"
+      },
+      {
+        "rank": 3,
+        "model_id": "Cautious_Navigator",
+        "strategy_name": "CautiousNavigator",
+        "final_score": 54,
+        "turns_taken": 50,
+        "nodes_visited": 7,
+        "cause_of_termination": "TURN_LIMIT"
+      },
+      {
+        "rank": 4,
+        "model_id": "Shortest_Path",
+        "strategy_name": "ShortestPath",
+        "final_score": 46,
+        "turns_taken": 4,
+        "nodes_visited": 4,
+        "cause_of_termination": "FINISHED"
+      }
+    ],
+    "graph_stats": {
+      "num_nodes": 30,
+      "num_edges": 148,
+      "num_obstructed_edges": 14,
+      "num_start": 1,
+      "num_end": 1,
+      "num_normal": 16,
+      "num_points": 5,
+      "num_trap": 2,
+      "num_checkpoint": 2,
+      "num_clue": 2,
+      "num_map": 1
+    },
+    "total_turns": 50,
+    "full_state": {
+      "graph": {
+        "nodes": {
+          "n27": {
+            "id": "n27",
+            "node_type": "START",
+            "point_value": 0
+          },
+          "n10": {
+            "id": "n10",
+            "node_type": "END",
+            "point_value": 0
+          },
+          "n0": {
+            "id": "n0",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n1": {
+            "id": "n1",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n2": {
+            "id": "n2",
+            "node_type": "POINTS",
+            "point_value": 8
+          },
+          "n3": {
+            "id": "n3",
+            "node_type": "TRAP",
+            "point_value": 0
+          },
+          "n4": {
+            "id": "n4",
+            "node_type": "POINTS",
+            "point_value": 5
+          },
+          "n5": {
+            "id": "n5",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n6": {
+            "id": "n6",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n7": {
+            "id": "n7",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n8": {
+            "id": "n8",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n9": {
+            "id": "n9",
+            "node_type": "POINTS",
+            "point_value": 8
+          },
+          "n11": {
+            "id": "n11",
+            "node_type": "CHECKPOINT",
+            "point_value": 0
+          },
+          "n12": {
+            "id": "n12",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n13": {
+            "id": "n13",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n14": {
+            "id": "n14",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n15": {
+            "id": "n15",
+            "node_type": "CLUE",
+            "point_value": 0
+          },
+          "n16": {
+            "id": "n16",
+            "node_type": "MAP",
+            "point_value": 0
+          },
+          "n17": {
+            "id": "n17",
+            "node_type": "CLUE",
+            "point_value": 0
+          },
+          "n18": {
+            "id": "n18",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n19": {
+            "id": "n19",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n20": {
+            "id": "n20",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n21": {
+            "id": "n21",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n22": {
+            "id": "n22",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n23": {
+            "id": "n23",
+            "node_type": "TRAP",
+            "point_value": 0
+          },
+          "n24": {
+            "id": "n24",
+            "node_type": "POINTS",
+            "point_value": 1
+          },
+          "n25": {
+            "id": "n25",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n26": {
+            "id": "n26",
+            "node_type": "CHECKPOINT",
+            "point_value": 0
+          },
+          "n28": {
+            "id": "n28",
+            "node_type": "POINTS",
+            "point_value": 6
+          },
+          "n29": {
+            "id": "n29",
+            "node_type": "NORMAL",
+            "point_value": 0
+          }
+        },
+        "edges": [
+          {
+            "source": "n6",
+            "target": "n8",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n18",
+            "target": "n6",
+            "cost": 6,
+            "obstructed": true
+          },
+          {
+            "source": "n1",
+            "target": "n26",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n14",
+            "target": "n24",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n22",
+            "target": "n23",
+            "cost": 4,
+            "obstructed": true
+          },
+          {
+            "source": "n1",
+            "target": "n3",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n22",
+            "target": "n5",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n14",
+            "target": "n15",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n27",
+            "target": "n28",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n15",
+            "target": "n4",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n13",
+            "target": "n14",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n5",
+            "target": "n7",
+            "cost": 8,
+            "obstructed": true
+          },
+          {
+            "source": "n12",
+            "target": "n14",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n18",
+            "target": "n19",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n2",
+            "target": "n4",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n10",
+            "target": "n4",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n19",
+            "target": "n9",
+            "cost": 9,
+            "obstructed": true
+          },
+          {
+            "source": "n14",
+            "target": "n26",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n18",
+            "target": "n20",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n29",
+            "target": "n9",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n5",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n16",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n16",
+            "target": "n9",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n29",
+            "target": "n8",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n17",
+            "target": "n29",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n23",
+            "target": "n3",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n8",
+            "target": "n9",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n25",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n19",
+            "target": "n24",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n25",
+            "target": "n8",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n22",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n16",
+            "target": "n29",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n12",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n27",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n17",
+            "target": "n28",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n13",
+            "target": "n9",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n21",
+            "target": "n24",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n10",
+            "target": "n18",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n4",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n20",
+            "target": "n9",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n19",
+            "target": "n26",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n12",
+            "target": "n9",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n20",
+            "target": "n8",
+            "cost": 10,
+            "obstructed": true
+          },
+          {
+            "source": "n1",
+            "target": "n5",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n19",
+            "target": "n3",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n5",
+            "target": "n9",
+            "cost": 2,
+            "obstructed": true
+          },
+          {
+            "source": "n3",
+            "target": "n5",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n26",
+            "target": "n29",
+            "cost": 3,
+            "obstructed": true
+          },
+          {
+            "source": "n15",
+            "target": "n24",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n17",
+            "target": "n25",
+            "cost": 5,
+            "obstructed": true
+          },
+          {
+            "source": "n0",
+            "target": "n4",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n12",
+            "target": "n16",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n21",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n13",
+            "target": "n29",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n25",
+            "target": "n26",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n16",
+            "target": "n17",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n20",
+            "target": "n29",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n25",
+            "target": "n3",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n23",
+            "target": "n7",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n26",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n14",
+            "target": "n23",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n18",
+            "target": "n9",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n23",
+            "target": "n28",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n18",
+            "target": "n8",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n10",
+            "target": "n11",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n27",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n16",
+            "target": "n25",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n21",
+            "target": "n9",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n21",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n22",
+            "target": "n9",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n26",
+            "target": "n5",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n13",
+            "target": "n28",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n7",
+            "target": "n8",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n14",
+            "target": "n21",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n18",
+            "target": "n24",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n17",
+            "target": "n7",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n20",
+            "target": "n3",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n16",
+            "target": "n27",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n23",
+            "target": "n25",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n14",
+            "target": "n22",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n2",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n25",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n27",
+            "target": "n9",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n14",
+            "target": "n19",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n17",
+            "target": "n4",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n14",
+            "target": "n27",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n13",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n28",
+            "target": "n8",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n17",
+            "target": "n5",
+            "cost": 2,
+            "obstructed": true
+          },
+          {
+            "source": "n22",
+            "target": "n29",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n29",
+            "target": "n7",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n1",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n23",
+            "target": "n27",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n19",
+            "target": "n23",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n14",
+            "target": "n18",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n14",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n19",
+            "target": "n5",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n16",
+            "target": "n4",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n13",
+            "target": "n22",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n16",
+            "target": "n23",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n11",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n10",
+            "target": "n13",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n10",
+            "target": "n24",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n22",
+            "target": "n26",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n2",
+            "target": "n29",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n29",
+            "target": "n6",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n18",
+            "target": "n5",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n24",
+            "cost": 5,
+            "obstructed": true
+          },
+          {
+            "source": "n10",
+            "target": "n15",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n6",
+            "target": "n7",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n26",
+            "target": "n7",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n22",
+            "target": "n3",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n25",
+            "target": "n4",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n25",
+            "target": "n5",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n21",
+            "target": "n5",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n23",
+            "cost": 7,
+            "obstructed": true
+          },
+          {
+            "source": "n26",
+            "target": "n4",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n10",
+            "target": "n26",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n20",
+            "target": "n28",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n6",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n9",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n15",
+            "target": "n17",
+            "cost": 1,
+            "obstructed": true
+          },
+          {
+            "source": "n13",
+            "target": "n4",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n26",
+            "target": "n6",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n26",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n3",
+            "target": "n9",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n16",
+            "target": "n2",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n3",
+            "target": "n8",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n12",
+            "target": "n4",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n20",
+            "target": "n23",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n16",
+            "target": "n20",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n22",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n24",
+            "target": "n7",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n16",
+            "target": "n18",
+            "cost": 1,
+            "obstructed": true
+          },
+          {
+            "source": "n21",
+            "target": "n27",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n9",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n8",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n4",
+            "target": "n7",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n18",
+            "target": "n7",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n5",
+            "target": "n6",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n2",
+            "target": "n25",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n24",
+            "target": "n4",
+            "cost": 4,
+            "obstructed": true
+          },
+          {
+            "source": "n14",
+            "target": "n9",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n20",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n16",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n23",
+            "target": "n8",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n6",
+            "target": "n9",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n29",
+            "cost": 1,
+            "obstructed": false
+          }
+        ],
+        "start_node": "n27",
+        "end_node": "n10"
+      },
+      "models": {
+        "Random_Walker": {
+          "model_id": "Random_Walker",
+          "strategy_name": "RandomWalker",
+          "current_node": "n11",
+          "score": 56,
+          "has_finished": false,
+          "active_checkpoint": "n11",
+          "visited_nodes": [
+            "n0",
+            "n1",
+            "n11",
+            "n12",
+            "n13",
+            "n14",
+            "n16",
+            "n18",
+            "n19",
+            "n2",
+            "n20",
+            "n21",
+            "n22",
+            "n23",
+            "n24",
+            "n25",
+            "n26",
+            "n27",
+            "n28",
+            "n29",
+            "n3",
+            "n5",
+            "n6",
+            "n7",
+            "n8",
+            "n9"
+          ],
+          "visible_nodes": [
+            "n0",
+            "n1",
+            "n10",
+            "n11",
+            "n12",
+            "n13",
+            "n14",
+            "n15",
+            "n16",
+            "n17",
+            "n18",
+            "n19",
+            "n2",
+            "n20",
+            "n21",
+            "n22",
+            "n23",
+            "n24",
+            "n25",
+            "n26",
+            "n27",
+            "n28",
+            "n29",
+            "n3",
+            "n4",
+            "n5",
+            "n6",
+            "n7",
+            "n8",
+            "n9"
+          ],
+          "visible_edges": [
+            [
+              "n0",
+              "n1"
+            ],
+            [
+              "n0",
+              "n14"
+            ],
+            [
+              "n0",
+              "n16"
+            ],
+            [
+              "n0",
+              "n2"
+            ],
+            [
+              "n0",
+              "n21"
+            ],
+            [
+              "n0",
+              "n22"
+            ],
+            [
+              "n0",
+              "n24"
+            ],
+            [
+              "n0",
+              "n25"
+            ],
+            [
+              "n0",
+              "n26"
+            ],
+            [
+              "n0",
+              "n27"
+            ],
+            [
+              "n0",
+              "n29"
+            ],
+            [
+              "n0",
+              "n4"
+            ],
+            [
+              "n0",
+              "n5"
+            ],
+            [
+              "n0",
+              "n8"
+            ],
+            [
+              "n0",
+              "n9"
+            ],
+            [
+              "n1",
+              "n11"
+            ],
+            [
+              "n1",
+              "n16"
+            ],
+            [
+              "n1",
+              "n21"
+            ],
+            [
+              "n1",
+              "n26"
+            ],
+            [
+              "n1",
+              "n27"
+            ],
+            [
+              "n1",
+              "n3"
+            ],
+            [
+              "n1",
+              "n4"
+            ],
+            [
+              "n1",
+              "n5"
+            ],
+            [
+              "n1",
+              "n9"
+            ],
+            [
+              "n10",
+              "n11"
+            ],
+            [
+              "n10",
+              "n13"
+            ],
+            [
+              "n10",
+              "n18"
+            ],
+            [
+              "n10",
+              "n24"
+            ],
+            [
+              "n10",
+              "n26"
+            ],
+            [
+              "n10",
+              "n4"
+            ],
+            [
+              "n11",
+              "n12"
+            ],
+            [
+              "n11",
+              "n13"
+            ],
+            [
+              "n11",
+              "n20"
+            ],
+            [
+              "n11",
+              "n22"
+            ],
+            [
+              "n11",
+              "n23"
+            ],
+            [
+              "n11",
+              "n25"
+            ],
+            [
+              "n11",
+              "n26"
+            ],
+            [
+              "n11",
+              "n6"
+            ],
+            [
+              "n12",
+              "n14"
+            ],
+            [
+              "n12",
+              "n16"
+            ],
+            [
+              "n12",
+              "n4"
+            ],
+            [
+              "n12",
+              "n9"
+            ],
+            [
+              "n13",
+              "n14"
+            ],
+            [
+              "n13",
+              "n22"
+            ],
+            [
+              "n13",
+              "n28"
+            ],
+            [
+              "n13",
+              "n29"
+            ],
+            [
+              "n13",
+              "n4"
+            ],
+            [
+              "n13",
+              "n9"
+            ],
+            [
+              "n14",
+              "n15"
+            ],
+            [
+              "n14",
+              "n18"
+            ],
+            [
+              "n14",
+              "n19"
+            ],
+            [
+              "n14",
+              "n21"
+            ],
+            [
+              "n14",
+              "n22"
+            ],
+            [
+              "n14",
+              "n23"
+            ],
+            [
+              "n14",
+              "n24"
+            ],
+            [
+              "n14",
+              "n26"
+            ],
+            [
+              "n14",
+              "n27"
+            ],
+            [
+              "n14",
+              "n9"
+            ],
+            [
+              "n15",
+              "n17"
+            ],
+            [
+              "n15",
+              "n24"
+            ],
+            [
+              "n15",
+              "n4"
+            ],
+            [
+              "n16",
+              "n17"
+            ],
+            [
+              "n16",
+              "n18"
+            ],
+            [
+              "n16",
+              "n2"
+            ],
+            [
+              "n16",
+              "n20"
+            ],
+            [
+              "n16",
+              "n23"
+            ],
+            [
+              "n16",
+              "n25"
+            ],
+            [
+              "n16",
+              "n27"
+            ],
+            [
+              "n16",
+              "n29"
+            ],
+            [
+              "n16",
+              "n4"
+            ],
+            [
+              "n16",
+              "n9"
+            ],
+            [
+              "n17",
+              "n25"
+            ],
+            [
+              "n17",
+              "n28"
+            ],
+            [
+              "n17",
+              "n29"
+            ],
+            [
+              "n17",
+              "n4"
+            ],
+            [
+              "n17",
+              "n5"
+            ],
+            [
+              "n17",
+              "n7"
+            ],
+            [
+              "n18",
+              "n19"
+            ],
+            [
+              "n18",
+              "n20"
+            ],
+            [
+              "n18",
+              "n24"
+            ],
+            [
+              "n18",
+              "n5"
+            ],
+            [
+              "n18",
+              "n6"
+            ],
+            [
+              "n18",
+              "n7"
+            ],
+            [
+              "n18",
+              "n8"
+            ],
+            [
+              "n18",
+              "n9"
+            ],
+            [
+              "n19",
+              "n23"
+            ],
+            [
+              "n19",
+              "n24"
+            ],
+            [
+              "n19",
+              "n26"
+            ],
+            [
+              "n19",
+              "n3"
+            ],
+            [
+              "n19",
+              "n5"
+            ],
+            [
+              "n19",
+              "n9"
+            ],
+            [
+              "n2",
+              "n25"
+            ],
+            [
+              "n2",
+              "n29"
+            ],
+            [
+              "n2",
+              "n4"
+            ],
+            [
+              "n20",
+              "n23"
+            ],
+            [
+              "n20",
+              "n28"
+            ],
+            [
+              "n20",
+              "n29"
+            ],
+            [
+              "n20",
+              "n3"
+            ],
+            [
+              "n20",
+              "n8"
+            ],
+            [
+              "n20",
+              "n9"
+            ],
+            [
+              "n21",
+              "n24"
+            ],
+            [
+              "n21",
+              "n27"
+            ],
+            [
+              "n21",
+              "n5"
+            ],
+            [
+              "n21",
+              "n9"
+            ],
+            [
+              "n22",
+              "n23"
+            ],
+            [
+              "n22",
+              "n26"
+            ],
+            [
+              "n22",
+              "n29"
+            ],
+            [
+              "n22",
+              "n3"
+            ],
+            [
+              "n22",
+              "n5"
+            ],
+            [
+              "n22",
+              "n9"
+            ],
+            [
+              "n23",
+              "n25"
+            ],
+            [
+              "n23",
+              "n27"
+            ],
+            [
+              "n23",
+              "n28"
+            ],
+            [
+              "n23",
+              "n3"
+            ],
+            [
+              "n23",
+              "n7"
+            ],
+            [
+              "n23",
+              "n8"
+            ],
+            [
+              "n24",
+              "n4"
+            ],
+            [
+              "n24",
+              "n7"
+            ],
+            [
+              "n25",
+              "n26"
+            ],
+            [
+              "n25",
+              "n3"
+            ],
+            [
+              "n25",
+              "n4"
+            ],
+            [
+              "n25",
+              "n5"
+            ],
+            [
+              "n25",
+              "n8"
+            ],
+            [
+              "n26",
+              "n29"
+            ],
+            [
+              "n26",
+              "n4"
+            ],
+            [
+              "n26",
+              "n5"
+            ],
+            [
+              "n26",
+              "n6"
+            ],
+            [
+              "n26",
+              "n7"
+            ],
+            [
+              "n27",
+              "n28"
+            ],
+            [
+              "n27",
+              "n9"
+            ],
+            [
+              "n28",
+              "n8"
+            ],
+            [
+              "n29",
+              "n6"
+            ],
+            [
+              "n29",
+              "n7"
+            ],
+            [
+              "n29",
+              "n8"
+            ],
+            [
+              "n29",
+              "n9"
+            ],
+            [
+              "n3",
+              "n5"
+            ],
+            [
+              "n3",
+              "n8"
+            ],
+            [
+              "n3",
+              "n9"
+            ],
+            [
+              "n4",
+              "n7"
+            ],
+            [
+              "n5",
+              "n6"
+            ],
+            [
+              "n5",
+              "n7"
+            ],
+            [
+              "n5",
+              "n9"
+            ],
+            [
+              "n6",
+              "n7"
+            ],
+            [
+              "n6",
+              "n8"
+            ],
+            [
+              "n6",
+              "n9"
+            ],
+            [
+              "n7",
+              "n8"
+            ],
+            [
+              "n8",
+              "n9"
+            ]
+          ],
+          "turns_taken": 50,
+          "trap_deaths": 3
+        },
+        "Greedy_Explorer": {
+          "model_id": "Greedy_Explorer",
+          "strategy_name": "GreedyExplorer",
+          "current_node": "n10",
+          "score": 55,
+          "has_finished": true,
+          "active_checkpoint": null,
+          "visited_nodes": [
+            "n10",
+            "n14",
+            "n24",
+            "n9"
+          ],
+          "visible_nodes": [
+            "n0",
+            "n1",
+            "n10",
+            "n11",
+            "n12",
+            "n13",
+            "n14",
+            "n15",
+            "n16",
+            "n18",
+            "n19",
+            "n20",
+            "n21",
+            "n22",
+            "n23",
+            "n24",
+            "n26",
+            "n27",
+            "n28",
+            "n29",
+            "n3",
+            "n4",
+            "n5",
+            "n6",
+            "n7",
+            "n8",
+            "n9"
+          ],
+          "visible_edges": [
+            [
+              "n0",
+              "n14"
+            ],
+            [
+              "n0",
+              "n24"
+            ],
+            [
+              "n0",
+              "n27"
+            ],
+            [
+              "n0",
+              "n9"
+            ],
+            [
+              "n1",
+              "n27"
+            ],
+            [
+              "n1",
+              "n9"
+            ],
+            [
+              "n10",
+              "n11"
+            ],
+            [
+              "n10",
+              "n13"
+            ],
+            [
+              "n10",
+              "n15"
+            ],
+            [
+              "n10",
+              "n18"
+            ],
+            [
+              "n10",
+              "n24"
+            ],
+            [
+              "n10",
+              "n26"
+            ],
+            [
+              "n10",
+              "n4"
+            ],
+            [
+              "n12",
+              "n14"
+            ],
+            [
+              "n12",
+              "n9"
+            ],
+            [
+              "n13",
+              "n14"
+            ],
+            [
+              "n13",
+              "n9"
+            ],
+            [
+              "n14",
+              "n15"
+            ],
+            [
+              "n14",
+              "n18"
+            ],
+            [
+              "n14",
+              "n19"
+            ],
+            [
+              "n14",
+              "n21"
+            ],
+            [
+              "n14",
+              "n22"
+            ],
+            [
+              "n14",
+              "n23"
+            ],
+            [
+              "n14",
+              "n24"
+            ],
+            [
+              "n14",
+              "n26"
+            ],
+            [
+              "n14",
+              "n27"
+            ],
+            [
+              "n14",
+              "n9"
+            ],
+            [
+              "n15",
+              "n24"
+            ],
+            [
+              "n16",
+              "n27"
+            ],
+            [
+              "n16",
+              "n9"
+            ],
+            [
+              "n18",
+              "n24"
+            ],
+            [
+              "n18",
+              "n9"
+            ],
+            [
+              "n19",
+              "n24"
+            ],
+            [
+              "n19",
+              "n9"
+            ],
+            [
+              "n20",
+              "n9"
+            ],
+            [
+              "n21",
+              "n24"
+            ],
+            [
+              "n21",
+              "n27"
+            ],
+            [
+              "n21",
+              "n9"
+            ],
+            [
+              "n22",
+              "n9"
+            ],
+            [
+              "n23",
+              "n27"
+            ],
+            [
+              "n24",
+              "n4"
+            ],
+            [
+              "n24",
+              "n7"
+            ],
+            [
+              "n27",
+              "n28"
+            ],
+            [
+              "n27",
+              "n9"
+            ],
+            [
+              "n29",
+              "n9"
+            ],
+            [
+              "n3",
+              "n9"
+            ],
+            [
+              "n5",
+              "n9"
+            ],
+            [
+              "n6",
+              "n9"
+            ],
+            [
+              "n8",
+              "n9"
+            ]
+          ],
+          "turns_taken": 4,
+          "trap_deaths": 0
+        },
+        "Shortest_Path": {
+          "model_id": "Shortest_Path",
+          "strategy_name": "ShortestPath",
+          "current_node": "n10",
+          "score": 46,
+          "has_finished": true,
+          "active_checkpoint": "n26",
+          "visited_nodes": [
+            "n10",
+            "n14",
+            "n19",
+            "n26"
+          ],
+          "visible_nodes": [
+            "n0",
+            "n1",
+            "n10",
+            "n11",
+            "n12",
+            "n13",
+            "n14",
+            "n15",
+            "n16",
+            "n18",
+            "n19",
+            "n21",
+            "n22",
+            "n23",
+            "n24",
+            "n25",
+            "n26",
+            "n27",
+            "n28",
+            "n29",
+            "n3",
+            "n4",
+            "n5",
+            "n6",
+            "n7",
+            "n9"
+          ],
+          "visible_edges": [
+            [
+              "n0",
+              "n14"
+            ],
+            [
+              "n0",
+              "n26"
+            ],
+            [
+              "n0",
+              "n27"
+            ],
+            [
+              "n1",
+              "n26"
+            ],
+            [
+              "n1",
+              "n27"
+            ],
+            [
+              "n10",
+              "n11"
+            ],
+            [
+              "n10",
+              "n13"
+            ],
+            [
+              "n10",
+              "n15"
+            ],
+            [
+              "n10",
+              "n18"
+            ],
+            [
+              "n10",
+              "n24"
+            ],
+            [
+              "n10",
+              "n26"
+            ],
+            [
+              "n10",
+              "n4"
+            ],
+            [
+              "n11",
+              "n26"
+            ],
+            [
+              "n12",
+              "n14"
+            ],
+            [
+              "n13",
+              "n14"
+            ],
+            [
+              "n14",
+              "n15"
+            ],
+            [
+              "n14",
+              "n18"
+            ],
+            [
+              "n14",
+              "n19"
+            ],
+            [
+              "n14",
+              "n21"
+            ],
+            [
+              "n14",
+              "n22"
+            ],
+            [
+              "n14",
+              "n23"
+            ],
+            [
+              "n14",
+              "n24"
+            ],
+            [
+              "n14",
+              "n26"
+            ],
+            [
+              "n14",
+              "n27"
+            ],
+            [
+              "n14",
+              "n9"
+            ],
+            [
+              "n16",
+              "n27"
+            ],
+            [
+              "n18",
+              "n19"
+            ],
+            [
+              "n19",
+              "n23"
+            ],
+            [
+              "n19",
+              "n24"
+            ],
+            [
+              "n19",
+              "n26"
+            ],
+            [
+              "n19",
+              "n3"
+            ],
+            [
+              "n19",
+              "n5"
+            ],
+            [
+              "n19",
+              "n9"
+            ],
+            [
+              "n21",
+              "n27"
+            ],
+            [
+              "n22",
+              "n26"
+            ],
+            [
+              "n23",
+              "n27"
+            ],
+            [
+              "n25",
+              "n26"
+            ],
+            [
+              "n26",
+              "n29"
+            ],
+            [
+              "n26",
+              "n4"
+            ],
+            [
+              "n26",
+              "n5"
+            ],
+            [
+              "n26",
+              "n6"
+            ],
+            [
+              "n26",
+              "n7"
+            ],
+            [
+              "n27",
+              "n28"
+            ],
+            [
+              "n27",
+              "n9"
+            ]
+          ],
+          "turns_taken": 4,
+          "trap_deaths": 0
+        },
+        "Cautious_Navigator": {
+          "model_id": "Cautious_Navigator",
+          "strategy_name": "CautiousNavigator",
+          "current_node": "n11",
+          "score": 54,
+          "has_finished": false,
+          "active_checkpoint": "n11",
+          "visited_nodes": [
+            "n1",
+            "n11",
+            "n16",
+            "n26",
+            "n28",
+            "n29",
+            "n8"
+          ],
+          "visible_nodes": [
+            "n0",
+            "n1",
+            "n10",
+            "n11",
+            "n12",
+            "n13",
+            "n14",
+            "n15",
+            "n16",
+            "n17",
+            "n18",
+            "n19",
+            "n2",
+            "n20",
+            "n21",
+            "n22",
+            "n23",
+            "n24",
+            "n25",
+            "n26",
+            "n27",
+            "n28",
+            "n29",
+            "n3",
+            "n4",
+            "n5",
+            "n6",
+            "n7",
+            "n8",
+            "n9"
+          ],
+          "visible_edges": [
+            [
+              "n0",
+              "n1"
+            ],
+            [
+              "n0",
+              "n14"
+            ],
+            [
+              "n0",
+              "n16"
+            ],
+            [
+              "n0",
+              "n2"
+            ],
+            [
+              "n0",
+              "n21"
+            ],
+            [
+              "n0",
+              "n22"
+            ],
+            [
+              "n0",
+              "n24"
+            ],
+            [
+              "n0",
+              "n25"
+            ],
+            [
+              "n0",
+              "n26"
+            ],
+            [
+              "n0",
+              "n27"
+            ],
+            [
+              "n0",
+              "n29"
+            ],
+            [
+              "n0",
+              "n4"
+            ],
+            [
+              "n0",
+              "n5"
+            ],
+            [
+              "n0",
+              "n8"
+            ],
+            [
+              "n0",
+              "n9"
+            ],
+            [
+              "n1",
+              "n11"
+            ],
+            [
+              "n1",
+              "n16"
+            ],
+            [
+              "n1",
+              "n21"
+            ],
+            [
+              "n1",
+              "n26"
+            ],
+            [
+              "n1",
+              "n27"
+            ],
+            [
+              "n1",
+              "n3"
+            ],
+            [
+              "n1",
+              "n4"
+            ],
+            [
+              "n1",
+              "n5"
+            ],
+            [
+              "n1",
+              "n9"
+            ],
+            [
+              "n10",
+              "n11"
+            ],
+            [
+              "n10",
+              "n18"
+            ],
+            [
+              "n10",
+              "n26"
+            ],
+            [
+              "n10",
+              "n4"
+            ],
+            [
+              "n11",
+              "n12"
+            ],
+            [
+              "n11",
+              "n13"
+            ],
+            [
+              "n11",
+              "n20"
+            ],
+            [
+              "n11",
+              "n22"
+            ],
+            [
+              "n11",
+              "n23"
+            ],
+            [
+              "n11",
+              "n25"
+            ],
+            [
+              "n11",
+              "n26"
+            ],
+            [
+              "n11",
+              "n6"
+            ],
+            [
+              "n12",
+              "n14"
+            ],
+            [
+              "n12",
+              "n16"
+            ],
+            [
+              "n12",
+              "n4"
+            ],
+            [
+              "n12",
+              "n9"
+            ],
+            [
+              "n13",
+              "n28"
+            ],
+            [
+              "n13",
+              "n29"
+            ],
+            [
+              "n13",
+              "n4"
+            ],
+            [
+              "n13",
+              "n9"
+            ],
+            [
+              "n14",
+              "n18"
+            ],
+            [
+              "n14",
+              "n23"
+            ],
+            [
+              "n14",
+              "n26"
+            ],
+            [
+              "n14",
+              "n27"
+            ],
+            [
+              "n14",
+              "n9"
+            ],
+            [
+              "n15",
+              "n17"
+            ],
+            [
+              "n15",
+              "n4"
+            ],
+            [
+              "n16",
+              "n17"
+            ],
+            [
+              "n16",
+              "n18"
+            ],
+            [
+              "n16",
+              "n2"
+            ],
+            [
+              "n16",
+              "n20"
+            ],
+            [
+              "n16",
+              "n23"
+            ],
+            [
+              "n16",
+              "n25"
+            ],
+            [
+              "n16",
+              "n27"
+            ],
+            [
+              "n16",
+              "n29"
+            ],
+            [
+              "n16",
+              "n4"
+            ],
+            [
+              "n16",
+              "n9"
+            ],
+            [
+              "n17",
+              "n25"
+            ],
+            [
+              "n17",
+              "n28"
+            ],
+            [
+              "n17",
+              "n29"
+            ],
+            [
+              "n17",
+              "n4"
+            ],
+            [
+              "n17",
+              "n5"
+            ],
+            [
+              "n17",
+              "n7"
+            ],
+            [
+              "n18",
+              "n19"
+            ],
+            [
+              "n18",
+              "n20"
+            ],
+            [
+              "n18",
+              "n24"
+            ],
+            [
+              "n18",
+              "n5"
+            ],
+            [
+              "n18",
+              "n6"
+            ],
+            [
+              "n18",
+              "n7"
+            ],
+            [
+              "n18",
+              "n8"
+            ],
+            [
+              "n18",
+              "n9"
+            ],
+            [
+              "n19",
+              "n23"
+            ],
+            [
+              "n19",
+              "n26"
+            ],
+            [
+              "n19",
+              "n9"
+            ],
+            [
+              "n2",
+              "n25"
+            ],
+            [
+              "n2",
+              "n29"
+            ],
+            [
+              "n2",
+              "n4"
+            ],
+            [
+              "n20",
+              "n23"
+            ],
+            [
+              "n20",
+              "n28"
+            ],
+            [
+              "n20",
+              "n29"
+            ],
+            [
+              "n20",
+              "n3"
+            ],
+            [
+              "n20",
+              "n8"
+            ],
+            [
+              "n20",
+              "n9"
+            ],
+            [
+              "n21",
+              "n27"
+            ],
+            [
+              "n21",
+              "n9"
+            ],
+            [
+              "n22",
+              "n23"
+            ],
+            [
+              "n22",
+              "n26"
+            ],
+            [
+              "n22",
+              "n29"
+            ],
+            [
+              "n22",
+              "n9"
+            ],
+            [
+              "n23",
+              "n25"
+            ],
+            [
+              "n23",
+              "n27"
+            ],
+            [
+              "n23",
+              "n28"
+            ],
+            [
+              "n23",
+              "n3"
+            ],
+            [
+              "n23",
+              "n7"
+            ],
+            [
+              "n23",
+              "n8"
+            ],
+            [
+              "n24",
+              "n4"
+            ],
+            [
+              "n25",
+              "n26"
+            ],
+            [
+              "n25",
+              "n3"
+            ],
+            [
+              "n25",
+              "n4"
+            ],
+            [
+              "n25",
+              "n5"
+            ],
+            [
+              "n25",
+              "n8"
+            ],
+            [
+              "n26",
+              "n29"
+            ],
+            [
+              "n26",
+              "n4"
+            ],
+            [
+              "n26",
+              "n5"
+            ],
+            [
+              "n26",
+              "n6"
+            ],
+            [
+              "n26",
+              "n7"
+            ],
+            [
+              "n27",
+              "n28"
+            ],
+            [
+              "n27",
+              "n9"
+            ],
+            [
+              "n28",
+              "n8"
+            ],
+            [
+              "n29",
+              "n6"
+            ],
+            [
+              "n29",
+              "n7"
+            ],
+            [
+              "n29",
+              "n8"
+            ],
+            [
+              "n29",
+              "n9"
+            ],
+            [
+              "n3",
+              "n8"
+            ],
+            [
+              "n3",
+              "n9"
+            ],
+            [
+              "n4",
+              "n7"
+            ],
+            [
+              "n5",
+              "n9"
+            ],
+            [
+              "n6",
+              "n8"
+            ],
+            [
+              "n6",
+              "n9"
+            ],
+            [
+              "n7",
+              "n8"
+            ],
+            [
+              "n8",
+              "n9"
+            ]
+          ],
+          "turns_taken": 50,
+          "trap_deaths": 0
+        }
+      },
+      "current_turn": 50,
+      "max_turns": 50,
+      "config": {
+        "graph_config": {
+          "num_nodes": 30,
+          "edge_density": 0.3,
+          "trap_probability": 0.1,
+          "clue_probability": 0.1,
+          "map_probability": 0.1,
+          "checkpoint_probability": 0.1,
+          "points_probability": 0.2,
+          "obstacle_density": 0.1,
+          "map_reveal_depth": 2,
+          "min_point_value": 1,
+          "max_point_value": 10
+        },
+        "num_models": 4,
+        "max_turns": 50,
+        "move_timeout_seconds": 5.0,
+        "completion_bonus_multiplier": 1.0,
+        "death_penalty": 10,
+        "invalid_move_penalty": 1,
+        "trap_respawn_penalty": 5
+      },
+      "event_log": [
+        {
+          "turn": 0,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n1"
+          }
+        },
+        {
+          "turn": 0,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n9"
+          }
+        },
+        {
+          "turn": 0,
+          "model_id": "Shortest_Path",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n14"
+          }
+        },
+        {
+          "turn": 0,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n28"
+          }
+        },
+        {
+          "turn": 0,
+          "model_id": "Greedy_Explorer",
+          "event_type": "POINTS_COLLECTED",
+          "details": {
+            "points_node": "n9",
+            "points_awarded": 8
+          }
+        },
+        {
+          "turn": 0,
+          "model_id": "Cautious_Navigator",
+          "event_type": "POINTS_COLLECTED",
+          "details": {
+            "points_node": "n28",
+            "points_awarded": 6
+          }
+        },
+        {
+          "turn": 1,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n9"
+          }
+        },
+        {
+          "turn": 1,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n14"
+          }
+        },
+        {
+          "turn": 1,
+          "model_id": "Shortest_Path",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n19"
+          }
+        },
+        {
+          "turn": 1,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n8"
+          }
+        },
+        {
+          "turn": 1,
+          "model_id": "Random_Walker",
+          "event_type": "POINTS_COLLECTED",
+          "details": {
+            "points_node": "n9",
+            "points_awarded": 8
+          }
+        },
+        {
+          "turn": 2,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n18"
+          }
+        },
+        {
+          "turn": 2,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n24"
+          }
+        },
+        {
+          "turn": 2,
+          "model_id": "Shortest_Path",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 2,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n29"
+          }
+        },
+        {
+          "turn": 2,
+          "model_id": "Greedy_Explorer",
+          "event_type": "POINTS_COLLECTED",
+          "details": {
+            "points_node": "n24",
+            "points_awarded": 1
+          }
+        },
+        {
+          "turn": 2,
+          "model_id": "Shortest_Path",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 3,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n8"
+          }
+        },
+        {
+          "turn": 3,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n10"
+          }
+        },
+        {
+          "turn": 3,
+          "model_id": "Shortest_Path",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n10"
+          }
+        },
+        {
+          "turn": 3,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n16"
+          }
+        },
+        {
+          "turn": 3,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MAP_REVEALED",
+          "details": {
+            "map_node": "n16",
+            "depth": 2
+          }
+        },
+        {
+          "turn": 4,
+          "model_id": "Greedy_Explorer",
+          "event_type": "GAME_FINISHED",
+          "details": {
+            "turns_taken": 4,
+            "final_score": 55
+          }
+        },
+        {
+          "turn": 4,
+          "model_id": "Shortest_Path",
+          "event_type": "GAME_FINISHED",
+          "details": {
+            "turns_taken": 4,
+            "final_score": 46
+          }
+        },
+        {
+          "turn": 4,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n0"
+          }
+        },
+        {
+          "turn": 4,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n1"
+          }
+        },
+        {
+          "turn": 5,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n16"
+          }
+        },
+        {
+          "turn": 5,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 5,
+          "model_id": "Random_Walker",
+          "event_type": "MAP_REVEALED",
+          "details": {
+            "map_node": "n16",
+            "depth": 2
+          }
+        },
+        {
+          "turn": 5,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 6,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n20"
+          }
+        },
+        {
+          "turn": 6,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 6,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 7,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n16"
+          }
+        },
+        {
+          "turn": 7,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 7,
+          "model_id": "Random_Walker",
+          "event_type": "MAP_REVEALED",
+          "details": {
+            "map_node": "n16",
+            "depth": 2
+          }
+        },
+        {
+          "turn": 7,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 8,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n0"
+          }
+        },
+        {
+          "turn": 8,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 8,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 9,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 9,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 9,
+          "model_id": "Random_Walker",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 9,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 10,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n0"
+          }
+        },
+        {
+          "turn": 10,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 10,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 11,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n21"
+          }
+        },
+        {
+          "turn": 11,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 11,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 12,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n27"
+          }
+        },
+        {
+          "turn": 12,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 12,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 13,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n28"
+          }
+        },
+        {
+          "turn": 13,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 13,
+          "model_id": "Random_Walker",
+          "event_type": "POINTS_COLLECTED",
+          "details": {
+            "points_node": "n28",
+            "points_awarded": 6
+          }
+        },
+        {
+          "turn": 13,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 14,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n20"
+          }
+        },
+        {
+          "turn": 14,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 14,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 15,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n9"
+          }
+        },
+        {
+          "turn": 15,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 15,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 16,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n22"
+          }
+        },
+        {
+          "turn": 16,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 16,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 17,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n14"
+          }
+        },
+        {
+          "turn": 17,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 17,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 18,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n24"
+          }
+        },
+        {
+          "turn": 18,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 18,
+          "model_id": "Random_Walker",
+          "event_type": "POINTS_COLLECTED",
+          "details": {
+            "points_node": "n24",
+            "points_awarded": 1
+          }
+        },
+        {
+          "turn": 18,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 19,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n7"
+          }
+        },
+        {
+          "turn": 19,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 19,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 20,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n8"
+          }
+        },
+        {
+          "turn": 20,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 20,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 21,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n23"
+          }
+        },
+        {
+          "turn": 21,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 21,
+          "model_id": "Random_Walker",
+          "event_type": "TRAP_RESPAWN_CHECKPOINT",
+          "details": {
+            "trap_node": "n23",
+            "respawn_node": "n26",
+            "penalty": 5
+          }
+        },
+        {
+          "turn": 21,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 22,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n5"
+          }
+        },
+        {
+          "turn": 22,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 22,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 23,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n18"
+          }
+        },
+        {
+          "turn": 23,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 23,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 24,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n9"
+          }
+        },
+        {
+          "turn": 24,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 24,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 25,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n0"
+          }
+        },
+        {
+          "turn": 25,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 25,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 26,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n16"
+          }
+        },
+        {
+          "turn": 26,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 26,
+          "model_id": "Random_Walker",
+          "event_type": "MAP_REVEALED",
+          "details": {
+            "map_node": "n16",
+            "depth": 2
+          }
+        },
+        {
+          "turn": 26,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 27,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n12"
+          }
+        },
+        {
+          "turn": 27,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 27,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 28,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n14"
+          }
+        },
+        {
+          "turn": 28,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 28,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 29,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n27"
+          }
+        },
+        {
+          "turn": 29,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 29,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 30,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n9"
+          }
+        },
+        {
+          "turn": 30,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 30,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 31,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n18"
+          }
+        },
+        {
+          "turn": 31,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 31,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 32,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n19"
+          }
+        },
+        {
+          "turn": 32,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 32,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 33,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n5"
+          }
+        },
+        {
+          "turn": 33,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 33,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 34,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n18"
+          }
+        },
+        {
+          "turn": 34,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 34,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 35,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n9"
+          }
+        },
+        {
+          "turn": 35,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 35,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 36,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n8"
+          }
+        },
+        {
+          "turn": 36,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 36,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 37,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n3"
+          }
+        },
+        {
+          "turn": 37,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 37,
+          "model_id": "Random_Walker",
+          "event_type": "TRAP_RESPAWN_CHECKPOINT",
+          "details": {
+            "trap_node": "n3",
+            "respawn_node": "n26",
+            "penalty": 5
+          }
+        },
+        {
+          "turn": 37,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 38,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n25"
+          }
+        },
+        {
+          "turn": 38,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 38,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 39,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n2"
+          }
+        },
+        {
+          "turn": 39,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 39,
+          "model_id": "Random_Walker",
+          "event_type": "POINTS_COLLECTED",
+          "details": {
+            "points_node": "n2",
+            "points_awarded": 8
+          }
+        },
+        {
+          "turn": 39,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 40,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n0"
+          }
+        },
+        {
+          "turn": 40,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 40,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 41,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 41,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 41,
+          "model_id": "Random_Walker",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 41,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 42,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n19"
+          }
+        },
+        {
+          "turn": 42,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 42,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 43,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n23"
+          }
+        },
+        {
+          "turn": 43,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 43,
+          "model_id": "Random_Walker",
+          "event_type": "TRAP_RESPAWN_CHECKPOINT",
+          "details": {
+            "trap_node": "n23",
+            "respawn_node": "n26",
+            "penalty": 5
+          }
+        },
+        {
+          "turn": 43,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 44,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n22"
+          }
+        },
+        {
+          "turn": 44,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 44,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 45,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n13"
+          }
+        },
+        {
+          "turn": 45,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 45,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 46,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n29"
+          }
+        },
+        {
+          "turn": 46,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 46,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 47,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n9"
+          }
+        },
+        {
+          "turn": 47,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 47,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 48,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n6"
+          }
+        },
+        {
+          "turn": 48,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 48,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n26"
+          }
+        },
+        {
+          "turn": 49,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 49,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 49,
+          "model_id": "Random_Walker",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 49,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n11"
+          }
+        },
+        {
+          "turn": 50,
+          "model_id": "",
+          "event_type": "GAME_ENDED_BY_TURN_LIMIT",
+          "details": {
+            "max_turns": 50
+          }
+        }
+      ]
+    }
+  },
+  {
+    "game_id": "6065a57c-d8fe-4dcb-a6f2-3f64058cf424",
+    "timestamp": "2026-06-26T09:44:29.943790+00:00",
+    "config": {
+      "graph_config": {
+        "num_nodes": 30,
+        "edge_density": 0.3,
+        "trap_probability": 0.1,
+        "clue_probability": 0.1,
+        "map_probability": 0.1,
+        "checkpoint_probability": 0.1,
+        "points_probability": 0.2,
+        "obstacle_density": 0.1,
+        "map_reveal_depth": 2,
+        "min_point_value": 1,
+        "max_point_value": 10
+      },
+      "num_models": 4,
+      "max_turns": 50,
+      "move_timeout_seconds": 5.0,
+      "completion_bonus_multiplier": 1.0,
+      "death_penalty": 10,
+      "invalid_move_penalty": 1,
+      "trap_respawn_penalty": 5
+    },
+    "rankings": [
+      {
+        "rank": 1,
+        "model_id": "Shortest_Path",
+        "strategy_name": "ShortestPath",
+        "final_score": 38,
+        "turns_taken": 5,
+        "nodes_visited": 5,
+        "cause_of_termination": "FINISHED"
+      },
+      {
+        "rank": 2,
+        "model_id": "Cautious_Navigator",
+        "strategy_name": "CautiousNavigator",
+        "final_score": 37,
+        "turns_taken": 13,
+        "nodes_visited": 4,
+        "cause_of_termination": "FINISHED"
+      },
+      {
+        "rank": 3,
+        "model_id": "Random_Walker",
+        "strategy_name": "RandomWalker",
+        "final_score": 29,
+        "turns_taken": 13,
+        "nodes_visited": 10,
+        "cause_of_termination": "FINISHED"
+      },
+      {
+        "rank": 4,
+        "model_id": "Greedy_Explorer",
+        "strategy_name": "GreedyExplorer",
+        "final_score": -31,
+        "turns_taken": 28,
+        "nodes_visited": 23,
+        "cause_of_termination": "FINISHED"
+      }
+    ],
+    "graph_stats": {
+      "num_nodes": 30,
+      "num_edges": 149,
+      "num_obstructed_edges": 14,
+      "num_start": 1,
+      "num_end": 1,
+      "num_normal": 10,
+      "num_map": 3,
+      "num_trap": 4,
+      "num_clue": 4,
+      "num_points": 5,
+      "num_checkpoint": 2
+    },
+    "total_turns": 28,
+    "full_state": {
+      "graph": {
+        "nodes": {
+          "n8": {
+            "id": "n8",
+            "node_type": "START",
+            "point_value": 0
+          },
+          "n5": {
+            "id": "n5",
+            "node_type": "END",
+            "point_value": 0
+          },
+          "n0": {
+            "id": "n0",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n1": {
+            "id": "n1",
+            "node_type": "MAP",
+            "point_value": 0
+          },
+          "n2": {
+            "id": "n2",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n3": {
+            "id": "n3",
+            "node_type": "TRAP",
+            "point_value": 0
+          },
+          "n4": {
+            "id": "n4",
+            "node_type": "CLUE",
+            "point_value": 0
+          },
+          "n6": {
+            "id": "n6",
+            "node_type": "POINTS",
+            "point_value": 6
+          },
+          "n7": {
+            "id": "n7",
+            "node_type": "MAP",
+            "point_value": 0
+          },
+          "n9": {
+            "id": "n9",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n10": {
+            "id": "n10",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n11": {
+            "id": "n11",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n12": {
+            "id": "n12",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n13": {
+            "id": "n13",
+            "node_type": "CHECKPOINT",
+            "point_value": 0
+          },
+          "n14": {
+            "id": "n14",
+            "node_type": "CHECKPOINT",
+            "point_value": 0
+          },
+          "n15": {
+            "id": "n15",
+            "node_type": "CLUE",
+            "point_value": 0
+          },
+          "n16": {
+            "id": "n16",
+            "node_type": "CLUE",
+            "point_value": 0
+          },
+          "n17": {
+            "id": "n17",
+            "node_type": "POINTS",
+            "point_value": 10
+          },
+          "n18": {
+            "id": "n18",
+            "node_type": "POINTS",
+            "point_value": 9
+          },
+          "n19": {
+            "id": "n19",
+            "node_type": "TRAP",
+            "point_value": 0
+          },
+          "n20": {
+            "id": "n20",
+            "node_type": "MAP",
+            "point_value": 0
+          },
+          "n21": {
+            "id": "n21",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n22": {
+            "id": "n22",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n23": {
+            "id": "n23",
+            "node_type": "TRAP",
+            "point_value": 0
+          },
+          "n24": {
+            "id": "n24",
+            "node_type": "POINTS",
+            "point_value": 9
+          },
+          "n25": {
+            "id": "n25",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n26": {
+            "id": "n26",
+            "node_type": "TRAP",
+            "point_value": 0
+          },
+          "n27": {
+            "id": "n27",
+            "node_type": "NORMAL",
+            "point_value": 0
+          },
+          "n28": {
+            "id": "n28",
+            "node_type": "CLUE",
+            "point_value": 0
+          },
+          "n29": {
+            "id": "n29",
+            "node_type": "POINTS",
+            "point_value": 3
+          }
+        },
+        "edges": [
+          {
+            "source": "n13",
+            "target": "n5",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n16",
+            "target": "n8",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n23",
+            "target": "n26",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n13",
+            "target": "n27",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n13",
+            "target": "n6",
+            "cost": 2,
+            "obstructed": true
+          },
+          {
+            "source": "n20",
+            "target": "n22",
+            "cost": 9,
+            "obstructed": true
+          },
+          {
+            "source": "n16",
+            "target": "n17",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n14",
+            "target": "n20",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n8",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n18",
+            "target": "n28",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n23",
+            "target": "n29",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n9",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n14",
+            "target": "n21",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n5",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n19",
+            "target": "n6",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n14",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n5",
+            "target": "n7",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n10",
+            "target": "n22",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n17",
+            "target": "n23",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n28",
+            "target": "n8",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n26",
+            "target": "n8",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n15",
+            "target": "n29",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n20",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n12",
+            "target": "n3",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n11",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n28",
+            "target": "n9",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n17",
+            "target": "n25",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n15",
+            "target": "n25",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n21",
+            "target": "n3",
+            "cost": 9,
+            "obstructed": true
+          },
+          {
+            "source": "n21",
+            "target": "n8",
+            "cost": 2,
+            "obstructed": true
+          },
+          {
+            "source": "n1",
+            "target": "n22",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n12",
+            "target": "n4",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n15",
+            "target": "n28",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n16",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n10",
+            "target": "n20",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n17",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n7",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n9",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n4",
+            "target": "n7",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n24",
+            "target": "n7",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n2",
+            "target": "n24",
+            "cost": 8,
+            "obstructed": true
+          },
+          {
+            "source": "n18",
+            "target": "n24",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n29",
+            "target": "n3",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n12",
+            "target": "n15",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n10",
+            "target": "n27",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n25",
+            "target": "n4",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n16",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n18",
+            "target": "n22",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n2",
+            "target": "n8",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n14",
+            "target": "n5",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n22",
+            "target": "n5",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n19",
+            "target": "n28",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n25",
+            "target": "n26",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n13",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n2",
+            "target": "n9",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n28",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n8",
+            "target": "n9",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n22",
+            "target": "n27",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n17",
+            "target": "n29",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n22",
+            "target": "n6",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n27",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n13",
+            "target": "n26",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n20",
+            "target": "n25",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n16",
+            "target": "n27",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n5",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n16",
+            "target": "n6",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n12",
+            "target": "n17",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n13",
+            "target": "n15",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n4",
+            "target": "n5",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n10",
+            "target": "n23",
+            "cost": 4,
+            "obstructed": true
+          },
+          {
+            "source": "n0",
+            "target": "n26",
+            "cost": 2,
+            "obstructed": true
+          },
+          {
+            "source": "n24",
+            "target": "n27",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n15",
+            "target": "n8",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n25",
+            "target": "n3",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n10",
+            "target": "n19",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n10",
+            "target": "n5",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n15",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n29",
+            "target": "n8",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n10",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n23",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n13",
+            "target": "n3",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n12",
+            "target": "n21",
+            "cost": 6,
+            "obstructed": true
+          },
+          {
+            "source": "n10",
+            "target": "n28",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n28",
+            "target": "n6",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n26",
+            "target": "n27",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n10",
+            "target": "n6",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n26",
+            "target": "n6",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n13",
+            "target": "n17",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n21",
+            "target": "n5",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n23",
+            "target": "n27",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n5",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n12",
+            "target": "n7",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n19",
+            "target": "n22",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n18",
+            "target": "n2",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n23",
+            "target": "n7",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n20",
+            "target": "n23",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n14",
+            "target": "n3",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n8",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n12",
+            "cost": 7,
+            "obstructed": true
+          },
+          {
+            "source": "n24",
+            "target": "n29",
+            "cost": 5,
+            "obstructed": true
+          },
+          {
+            "source": "n0",
+            "target": "n17",
+            "cost": 7,
+            "obstructed": false
+          },
+          {
+            "source": "n18",
+            "target": "n19",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n18",
+            "target": "n25",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n28",
+            "target": "n29",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n10",
+            "target": "n15",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n18",
+            "target": "n5",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n19",
+            "target": "n20",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n14",
+            "target": "n18",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n10",
+            "target": "n29",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n26",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n20",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n16",
+            "target": "n4",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n4",
+            "target": "n8",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n14",
+            "target": "n15",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n15",
+            "target": "n2",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n12",
+            "target": "n19",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n16",
+            "target": "n18",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n4",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n16",
+            "target": "n26",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n20",
+            "target": "n4",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n15",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n12",
+            "target": "n5",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n29",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n19",
+            "target": "n7",
+            "cost": 1,
+            "obstructed": false
+          },
+          {
+            "source": "n28",
+            "target": "n3",
+            "cost": 5,
+            "obstructed": true
+          },
+          {
+            "source": "n24",
+            "target": "n4",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n18",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n13",
+            "target": "n16",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n26",
+            "cost": 6,
+            "obstructed": false
+          },
+          {
+            "source": "n22",
+            "target": "n24",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n23",
+            "target": "n6",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n24",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n17",
+            "target": "n19",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n15",
+            "target": "n19",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n14",
+            "target": "n22",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n3",
+            "target": "n6",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n15",
+            "cost": 10,
+            "obstructed": false
+          },
+          {
+            "source": "n11",
+            "target": "n14",
+            "cost": 5,
+            "obstructed": false
+          },
+          {
+            "source": "n15",
+            "target": "n5",
+            "cost": 2,
+            "obstructed": false
+          },
+          {
+            "source": "n10",
+            "target": "n4",
+            "cost": 8,
+            "obstructed": false
+          },
+          {
+            "source": "n5",
+            "target": "n9",
+            "cost": 4,
+            "obstructed": false
+          },
+          {
+            "source": "n1",
+            "target": "n3",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n22",
+            "target": "n8",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n10",
+            "target": "n18",
+            "cost": 9,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n16",
+            "cost": 10,
+            "obstructed": true
+          },
+          {
+            "source": "n15",
+            "target": "n27",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n23",
+            "target": "n4",
+            "cost": 3,
+            "obstructed": false
+          },
+          {
+            "source": "n0",
+            "target": "n2",
+            "cost": 5,
+            "obstructed": true
+          },
+          {
+            "source": "n20",
+            "target": "n24",
+            "cost": 2,
+            "obstructed": true
+          }
+        ],
+        "start_node": "n8",
+        "end_node": "n5"
+      },
+      "models": {
+        "Random_Walker": {
+          "model_id": "Random_Walker",
+          "strategy_name": "RandomWalker",
+          "current_node": "n5",
+          "score": 29,
+          "has_finished": true,
+          "active_checkpoint": null,
+          "visited_nodes": [
+            "n0",
+            "n10",
+            "n15",
+            "n18",
+            "n19",
+            "n26",
+            "n28",
+            "n29",
+            "n5",
+            "n9"
+          ],
+          "visible_nodes": [
+            "n0",
+            "n1",
+            "n10",
+            "n11",
+            "n12",
+            "n13",
+            "n14",
+            "n15",
+            "n16",
+            "n17",
+            "n18",
+            "n19",
+            "n2",
+            "n20",
+            "n21",
+            "n22",
+            "n23",
+            "n24",
+            "n25",
+            "n26",
+            "n27",
+            "n28",
+            "n29",
+            "n3",
+            "n4",
+            "n5",
+            "n6",
+            "n7",
+            "n8",
+            "n9"
+          ],
+          "visible_edges": [
+            [
+              "n0",
+              "n11"
+            ],
+            [
+              "n0",
+              "n15"
+            ],
+            [
+              "n0",
+              "n16"
+            ],
+            [
+              "n0",
+              "n17"
+            ],
+            [
+              "n0",
+              "n2"
+            ],
+            [
+              "n0",
+              "n20"
+            ],
+            [
+              "n0",
+              "n26"
+            ],
+            [
+              "n0",
+              "n28"
+            ],
+            [
+              "n0",
+              "n5"
+            ],
+            [
+              "n0",
+              "n8"
+            ],
+            [
+              "n1",
+              "n10"
+            ],
+            [
+              "n1",
+              "n15"
+            ],
+            [
+              "n1",
+              "n29"
+            ],
+            [
+              "n1",
+              "n5"
+            ],
+            [
+              "n1",
+              "n9"
+            ],
+            [
+              "n10",
+              "n15"
+            ],
+            [
+              "n10",
+              "n18"
+            ],
+            [
+              "n10",
+              "n19"
+            ],
+            [
+              "n10",
+              "n20"
+            ],
+            [
+              "n10",
+              "n22"
+            ],
+            [
+              "n10",
+              "n23"
+            ],
+            [
+              "n10",
+              "n27"
+            ],
+            [
+              "n10",
+              "n28"
+            ],
+            [
+              "n10",
+              "n29"
+            ],
+            [
+              "n10",
+              "n4"
+            ],
+            [
+              "n10",
+              "n5"
+            ],
+            [
+              "n10",
+              "n6"
+            ],
+            [
+              "n11",
+              "n15"
+            ],
+            [
+              "n11",
+              "n18"
+            ],
+            [
+              "n11",
+              "n5"
+            ],
+            [
+              "n11",
+              "n8"
+            ],
+            [
+              "n11",
+              "n9"
+            ],
+            [
+              "n12",
+              "n15"
+            ],
+            [
+              "n12",
+              "n5"
+            ],
+            [
+              "n13",
+              "n15"
+            ],
+            [
+              "n13",
+              "n5"
+            ],
+            [
+              "n14",
+              "n15"
+            ],
+            [
+              "n14",
+              "n18"
+            ],
+            [
+              "n14",
+              "n5"
+            ],
+            [
+              "n15",
+              "n19"
+            ],
+            [
+              "n15",
+              "n2"
+            ],
+            [
+              "n15",
+              "n25"
+            ],
+            [
+              "n15",
+              "n27"
+            ],
+            [
+              "n15",
+              "n28"
+            ],
+            [
+              "n15",
+              "n29"
+            ],
+            [
+              "n15",
+              "n5"
+            ],
+            [
+              "n15",
+              "n8"
+            ],
+            [
+              "n16",
+              "n18"
+            ],
+            [
+              "n16",
+              "n8"
+            ],
+            [
+              "n17",
+              "n29"
+            ],
+            [
+              "n18",
+              "n19"
+            ],
+            [
+              "n18",
+              "n2"
+            ],
+            [
+              "n18",
+              "n22"
+            ],
+            [
+              "n18",
+              "n24"
+            ],
+            [
+              "n18",
+              "n25"
+            ],
+            [
+              "n18",
+              "n28"
+            ],
+            [
+              "n18",
+              "n5"
+            ],
+            [
+              "n19",
+              "n28"
+            ],
+            [
+              "n2",
+              "n8"
+            ],
+            [
+              "n2",
+              "n9"
+            ],
+            [
+              "n21",
+              "n5"
+            ],
+            [
+              "n21",
+              "n8"
+            ],
+            [
+              "n22",
+              "n5"
+            ],
+            [
+              "n22",
+              "n8"
+            ],
+            [
+              "n23",
+              "n29"
+            ],
+            [
+              "n24",
+              "n29"
+            ],
+            [
+              "n26",
+              "n8"
+            ],
+            [
+              "n28",
+              "n29"
+            ],
+            [
+              "n28",
+              "n3"
+            ],
+            [
+              "n28",
+              "n6"
+            ],
+            [
+              "n28",
+              "n8"
+            ],
+            [
+              "n28",
+              "n9"
+            ],
+            [
+              "n29",
+              "n3"
+            ],
+            [
+              "n29",
+              "n8"
+            ],
+            [
+              "n4",
+              "n5"
+            ],
+            [
+              "n4",
+              "n8"
+            ],
+            [
+              "n5",
+              "n7"
+            ],
+            [
+              "n5",
+              "n9"
+            ],
+            [
+              "n8",
+              "n9"
+            ]
+          ],
+          "turns_taken": 13,
+          "trap_deaths": 2
+        },
+        "Greedy_Explorer": {
+          "model_id": "Greedy_Explorer",
+          "strategy_name": "GreedyExplorer",
+          "current_node": "n5",
+          "score": -31,
+          "has_finished": true,
+          "active_checkpoint": null,
+          "visited_nodes": [
+            "n0",
+            "n1",
+            "n10",
+            "n11",
+            "n15",
+            "n16",
+            "n17",
+            "n18",
+            "n19",
+            "n2",
+            "n20",
+            "n22",
+            "n23",
+            "n24",
+            "n26",
+            "n28",
+            "n29",
+            "n3",
+            "n4",
+            "n5",
+            "n6",
+            "n7",
+            "n9"
+          ],
+          "visible_nodes": [
+            "n0",
+            "n1",
+            "n10",
+            "n11",
+            "n12",
+            "n13",
+            "n14",
+            "n15",
+            "n16",
+            "n17",
+            "n18",
+            "n19",
+            "n2",
+            "n20",
+            "n21",
+            "n22",
+            "n23",
+            "n24",
+            "n25",
+            "n26",
+            "n27",
+            "n28",
+            "n29",
+            "n3",
+            "n4",
+            "n5",
+            "n6",
+            "n7",
+            "n8",
+            "n9"
+          ],
+          "visible_edges": [
+            [
+              "n0",
+              "n11"
+            ],
+            [
+              "n0",
+              "n15"
+            ],
+            [
+              "n0",
+              "n16"
+            ],
+            [
+              "n0",
+              "n17"
+            ],
+            [
+              "n0",
+              "n2"
+            ],
+            [
+              "n0",
+              "n20"
+            ],
+            [
+              "n0",
+              "n26"
+            ],
+            [
+              "n0",
+              "n28"
+            ],
+            [
+              "n0",
+              "n5"
+            ],
+            [
+              "n0",
+              "n8"
+            ],
+            [
+              "n1",
+              "n10"
+            ],
+            [
+              "n1",
+              "n12"
+            ],
+            [
+              "n1",
+              "n13"
+            ],
+            [
+              "n1",
+              "n14"
+            ],
+            [
+              "n1",
+              "n15"
+            ],
+            [
+              "n1",
+              "n16"
+            ],
+            [
+              "n1",
+              "n17"
+            ],
+            [
+              "n1",
+              "n22"
+            ],
+            [
+              "n1",
+              "n23"
+            ],
+            [
+              "n1",
+              "n24"
+            ],
+            [
+              "n1",
+              "n26"
+            ],
+            [
+              "n1",
+              "n27"
+            ],
+            [
+              "n1",
+              "n29"
+            ],
+            [
+              "n1",
+              "n3"
+            ],
+            [
+              "n1",
+              "n5"
+            ],
+            [
+              "n1",
+              "n9"
+            ],
+            [
+              "n10",
+              "n15"
+            ],
+            [
+              "n10",
+              "n18"
+            ],
+            [
+              "n10",
+              "n19"
+            ],
+            [
+              "n10",
+              "n20"
+            ],
+            [
+              "n10",
+              "n22"
+            ],
+            [
+              "n10",
+              "n23"
+            ],
+            [
+              "n10",
+              "n27"
+            ],
+            [
+              "n10",
+              "n28"
+            ],
+            [
+              "n10",
+              "n29"
+            ],
+            [
+              "n10",
+              "n4"
+            ],
+            [
+              "n10",
+              "n5"
+            ],
+            [
+              "n10",
+              "n6"
+            ],
+            [
+              "n11",
+              "n14"
+            ],
+            [
+              "n11",
+              "n15"
+            ],
+            [
+              "n11",
+              "n16"
+            ],
+            [
+              "n11",
+              "n18"
+            ],
+            [
+              "n11",
+              "n20"
+            ],
+            [
+              "n11",
+              "n26"
+            ],
+            [
+              "n11",
+              "n4"
+            ],
+            [
+              "n11",
+              "n5"
+            ],
+            [
+              "n11",
+              "n7"
+            ],
+            [
+              "n11",
+              "n8"
+            ],
+            [
+              "n11",
+              "n9"
+            ],
+            [
+              "n12",
+              "n15"
+            ],
+            [
+              "n12",
+              "n17"
+            ],
+            [
+              "n12",
+              "n19"
+            ],
+            [
+              "n12",
+              "n21"
+            ],
+            [
+              "n12",
+              "n3"
+            ],
+            [
+              "n12",
+              "n4"
+            ],
+            [
+              "n12",
+              "n5"
+            ],
+            [
+              "n12",
+              "n7"
+            ],
+            [
+              "n13",
+              "n15"
+            ],
+            [
+              "n13",
+              "n16"
+            ],
+            [
+              "n13",
+              "n17"
+            ],
+            [
+              "n13",
+              "n26"
+            ],
+            [
+              "n13",
+              "n27"
+            ],
+            [
+              "n13",
+              "n3"
+            ],
+            [
+              "n13",
+              "n5"
+            ],
+            [
+              "n13",
+              "n6"
+            ],
+            [
+              "n14",
+              "n15"
+            ],
+            [
+              "n14",
+              "n18"
+            ],
+            [
+              "n14",
+              "n20"
+            ],
+            [
+              "n14",
+              "n21"
+            ],
+            [
+              "n14",
+              "n22"
+            ],
+            [
+              "n14",
+              "n3"
+            ],
+            [
+              "n14",
+              "n5"
+            ],
+            [
+              "n15",
+              "n19"
+            ],
+            [
+              "n15",
+              "n2"
+            ],
+            [
+              "n15",
+              "n25"
+            ],
+            [
+              "n15",
+              "n27"
+            ],
+            [
+              "n15",
+              "n28"
+            ],
+            [
+              "n15",
+              "n29"
+            ],
+            [
+              "n15",
+              "n5"
+            ],
+            [
+              "n15",
+              "n8"
+            ],
+            [
+              "n16",
+              "n17"
+            ],
+            [
+              "n16",
+              "n18"
+            ],
+            [
+              "n16",
+              "n26"
+            ],
+            [
+              "n16",
+              "n27"
+            ],
+            [
+              "n16",
+              "n4"
+            ],
+            [
+              "n16",
+              "n6"
+            ],
+            [
+              "n16",
+              "n8"
+            ],
+            [
+              "n17",
+              "n19"
+            ],
+            [
+              "n17",
+              "n23"
+            ],
+            [
+              "n17",
+              "n25"
+            ],
+            [
+              "n17",
+              "n29"
+            ],
+            [
+              "n18",
+              "n19"
+            ],
+            [
+              "n18",
+              "n2"
+            ],
+            [
+              "n18",
+              "n22"
+            ],
+            [
+              "n18",
+              "n24"
+            ],
+            [
+              "n18",
+              "n25"
+            ],
+            [
+              "n18",
+              "n28"
+            ],
+            [
+              "n18",
+              "n5"
+            ],
+            [
+              "n19",
+              "n20"
+            ],
+            [
+              "n19",
+              "n22"
+            ],
+            [
+              "n19",
+              "n28"
+            ],
+            [
+              "n19",
+              "n6"
+            ],
+            [
+              "n19",
+              "n7"
+            ],
+            [
+              "n2",
+              "n24"
+            ],
+            [
+              "n2",
+              "n8"
+            ],
+            [
+              "n2",
+              "n9"
+            ],
+            [
+              "n20",
+              "n22"
+            ],
+            [
+              "n20",
+              "n23"
+            ],
+            [
+              "n20",
+              "n24"
+            ],
+            [
+              "n20",
+              "n25"
+            ],
+            [
+              "n20",
+              "n4"
+            ],
+            [
+              "n21",
+              "n3"
+            ],
+            [
+              "n21",
+              "n5"
+            ],
+            [
+              "n21",
+              "n8"
+            ],
+            [
+              "n22",
+              "n24"
+            ],
+            [
+              "n22",
+              "n27"
+            ],
+            [
+              "n22",
+              "n5"
+            ],
+            [
+              "n22",
+              "n6"
+            ],
+            [
+              "n22",
+              "n8"
+            ],
+            [
+              "n23",
+              "n26"
+            ],
+            [
+              "n23",
+              "n27"
+            ],
+            [
+              "n23",
+              "n29"
+            ],
+            [
+              "n23",
+              "n4"
+            ],
+            [
+              "n23",
+              "n6"
+            ],
+            [
+              "n23",
+              "n7"
+            ],
+            [
+              "n24",
+              "n27"
+            ],
+            [
+              "n24",
+              "n29"
+            ],
+            [
+              "n24",
+              "n4"
+            ],
+            [
+              "n24",
+              "n7"
+            ],
+            [
+              "n25",
+              "n26"
+            ],
+            [
+              "n25",
+              "n3"
+            ],
+            [
+              "n25",
+              "n4"
+            ],
+            [
+              "n26",
+              "n27"
+            ],
+            [
+              "n26",
+              "n6"
+            ],
+            [
+              "n26",
+              "n8"
+            ],
+            [
+              "n28",
+              "n29"
+            ],
+            [
+              "n28",
+              "n3"
+            ],
+            [
+              "n28",
+              "n6"
+            ],
+            [
+              "n28",
+              "n8"
+            ],
+            [
+              "n28",
+              "n9"
+            ],
+            [
+              "n29",
+              "n3"
+            ],
+            [
+              "n29",
+              "n8"
+            ],
+            [
+              "n3",
+              "n6"
+            ],
+            [
+              "n4",
+              "n5"
+            ],
+            [
+              "n4",
+              "n7"
+            ],
+            [
+              "n4",
+              "n8"
+            ],
+            [
+              "n5",
+              "n7"
+            ],
+            [
+              "n5",
+              "n9"
+            ],
+            [
+              "n8",
+              "n9"
+            ]
+          ],
+          "turns_taken": 28,
+          "trap_deaths": 9
+        },
+        "Shortest_Path": {
+          "model_id": "Shortest_Path",
+          "strategy_name": "ShortestPath",
+          "current_node": "n5",
+          "score": 38,
+          "has_finished": true,
+          "active_checkpoint": null,
+          "visited_nodes": [
+            "n15",
+            "n16",
+            "n26",
+            "n29",
+            "n5"
+          ],
+          "visible_nodes": [
+            "n0",
+            "n1",
+            "n10",
+            "n11",
+            "n12",
+            "n13",
+            "n14",
+            "n15",
+            "n16",
+            "n17",
+            "n18",
+            "n19",
+            "n2",
+            "n21",
+            "n22",
+            "n23",
+            "n24",
+            "n25",
+            "n26",
+            "n27",
+            "n28",
+            "n29",
+            "n3",
+            "n4",
+            "n5",
+            "n6",
+            "n7",
+            "n8",
+            "n9"
+          ],
+          "visible_edges": [
+            [
+              "n0",
+              "n15"
+            ],
+            [
+              "n0",
+              "n16"
+            ],
+            [
+              "n0",
+              "n5"
+            ],
+            [
+              "n0",
+              "n8"
+            ],
+            [
+              "n1",
+              "n15"
+            ],
+            [
+              "n1",
+              "n16"
+            ],
+            [
+              "n1",
+              "n29"
+            ],
+            [
+              "n1",
+              "n5"
+            ],
+            [
+              "n10",
+              "n15"
+            ],
+            [
+              "n10",
+              "n29"
+            ],
+            [
+              "n10",
+              "n5"
+            ],
+            [
+              "n11",
+              "n15"
+            ],
+            [
+              "n11",
+              "n16"
+            ],
+            [
+              "n11",
+              "n5"
+            ],
+            [
+              "n11",
+              "n8"
+            ],
+            [
+              "n12",
+              "n15"
+            ],
+            [
+              "n12",
+              "n5"
+            ],
+            [
+              "n13",
+              "n15"
+            ],
+            [
+              "n13",
+              "n16"
+            ],
+            [
+              "n13",
+              "n5"
+            ],
+            [
+              "n14",
+              "n15"
+            ],
+            [
+              "n14",
+              "n5"
+            ],
+            [
+              "n15",
+              "n19"
+            ],
+            [
+              "n15",
+              "n2"
+            ],
+            [
+              "n15",
+              "n25"
+            ],
+            [
+              "n15",
+              "n27"
+            ],
+            [
+              "n15",
+              "n28"
+            ],
+            [
+              "n15",
+              "n29"
+            ],
+            [
+              "n15",
+              "n5"
+            ],
+            [
+              "n15",
+              "n8"
+            ],
+            [
+              "n16",
+              "n17"
+            ],
+            [
+              "n16",
+              "n18"
+            ],
+            [
+              "n16",
+              "n26"
+            ],
+            [
+              "n16",
+              "n27"
+            ],
+            [
+              "n16",
+              "n4"
+            ],
+            [
+              "n16",
+              "n6"
+            ],
+            [
+              "n16",
+              "n8"
+            ],
+            [
+              "n17",
+              "n29"
+            ],
+            [
+              "n18",
+              "n5"
+            ],
+            [
+              "n2",
+              "n8"
+            ],
+            [
+              "n21",
+              "n5"
+            ],
+            [
+              "n21",
+              "n8"
+            ],
+            [
+              "n22",
+              "n5"
+            ],
+            [
+              "n22",
+              "n8"
+            ],
+            [
+              "n23",
+              "n29"
+            ],
+            [
+              "n24",
+              "n29"
+            ],
+            [
+              "n26",
+              "n8"
+            ],
+            [
+              "n28",
+              "n29"
+            ],
+            [
+              "n28",
+              "n8"
+            ],
+            [
+              "n29",
+              "n3"
+            ],
+            [
+              "n29",
+              "n8"
+            ],
+            [
+              "n4",
+              "n5"
+            ],
+            [
+              "n4",
+              "n8"
+            ],
+            [
+              "n5",
+              "n7"
+            ],
+            [
+              "n5",
+              "n9"
+            ],
+            [
+              "n8",
+              "n9"
+            ]
+          ],
+          "turns_taken": 5,
+          "trap_deaths": 1
+        },
+        "Cautious_Navigator": {
+          "model_id": "Cautious_Navigator",
+          "strategy_name": "CautiousNavigator",
+          "current_node": "n5",
+          "score": 37,
+          "has_finished": true,
+          "active_checkpoint": "n13",
+          "visited_nodes": [
+            "n13",
+            "n16",
+            "n27",
+            "n5"
+          ],
+          "visible_nodes": [
+            "n0",
+            "n1",
+            "n10",
+            "n11",
+            "n12",
+            "n13",
+            "n14",
+            "n15",
+            "n16",
+            "n17",
+            "n18",
+            "n2",
+            "n21",
+            "n22",
+            "n23",
+            "n24",
+            "n26",
+            "n27",
+            "n28",
+            "n29",
+            "n3",
+            "n4",
+            "n5",
+            "n6",
+            "n7",
+            "n8",
+            "n9"
+          ],
+          "visible_edges": [
+            [
+              "n0",
+              "n16"
+            ],
+            [
+              "n0",
+              "n5"
+            ],
+            [
+              "n0",
+              "n8"
+            ],
+            [
+              "n1",
+              "n13"
+            ],
+            [
+              "n1",
+              "n16"
+            ],
+            [
+              "n1",
+              "n27"
+            ],
+            [
+              "n1",
+              "n5"
+            ],
+            [
+              "n10",
+              "n27"
+            ],
+            [
+              "n10",
+              "n5"
+            ],
+            [
+              "n11",
+              "n16"
+            ],
+            [
+              "n11",
+              "n5"
+            ],
+            [
+              "n11",
+              "n8"
+            ],
+            [
+              "n12",
+              "n5"
+            ],
+            [
+              "n13",
+              "n15"
+            ],
+            [
+              "n13",
+              "n16"
+            ],
+            [
+              "n13",
+              "n17"
+            ],
+            [
+              "n13",
+              "n26"
+            ],
+            [
+              "n13",
+              "n27"
+            ],
+            [
+              "n13",
+              "n3"
+            ],
+            [
+              "n13",
+              "n5"
+            ],
+            [
+              "n13",
+              "n6"
+            ],
+            [
+              "n14",
+              "n5"
+            ],
+            [
+              "n15",
+              "n27"
+            ],
+            [
+              "n15",
+              "n5"
+            ],
+            [
+              "n15",
+              "n8"
+            ],
+            [
+              "n16",
+              "n17"
+            ],
+            [
+              "n16",
+              "n18"
+            ],
+            [
+              "n16",
+              "n26"
+            ],
+            [
+              "n16",
+              "n27"
+            ],
+            [
+              "n16",
+              "n4"
+            ],
+            [
+              "n16",
+              "n6"
+            ],
+            [
+              "n16",
+              "n8"
+            ],
+            [
+              "n18",
+              "n5"
+            ],
+            [
+              "n2",
+              "n8"
+            ],
+            [
+              "n21",
+              "n5"
+            ],
+            [
+              "n21",
+              "n8"
+            ],
+            [
+              "n22",
+              "n27"
+            ],
+            [
+              "n22",
+              "n5"
+            ],
+            [
+              "n22",
+              "n8"
+            ],
+            [
+              "n23",
+              "n27"
+            ],
+            [
+              "n24",
+              "n27"
+            ],
+            [
+              "n26",
+              "n27"
+            ],
+            [
+              "n26",
+              "n8"
+            ],
+            [
+              "n28",
+              "n8"
+            ],
+            [
+              "n29",
+              "n8"
+            ],
+            [
+              "n4",
+              "n5"
+            ],
+            [
+              "n4",
+              "n8"
+            ],
+            [
+              "n5",
+              "n7"
+            ],
+            [
+              "n5",
+              "n9"
+            ],
+            [
+              "n8",
+              "n9"
+            ]
+          ],
+          "turns_taken": 13,
+          "trap_deaths": 0
+        }
+      },
+      "current_turn": 28,
+      "max_turns": 50,
+      "config": {
+        "graph_config": {
+          "num_nodes": 30,
+          "edge_density": 0.3,
+          "trap_probability": 0.1,
+          "clue_probability": 0.1,
+          "map_probability": 0.1,
+          "checkpoint_probability": 0.1,
+          "points_probability": 0.2,
+          "obstacle_density": 0.1,
+          "map_reveal_depth": 2,
+          "min_point_value": 1,
+          "max_point_value": 10
+        },
+        "num_models": 4,
+        "max_turns": 50,
+        "move_timeout_seconds": 5.0,
+        "completion_bonus_multiplier": 1.0,
+        "death_penalty": 10,
+        "invalid_move_penalty": 1,
+        "trap_respawn_penalty": 5
+      },
+      "event_log": [
+        {
+          "turn": 0,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n9"
+          }
+        },
+        {
+          "turn": 0,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n29"
+          }
+        },
+        {
+          "turn": 0,
+          "model_id": "Shortest_Path",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n16"
+          }
+        },
+        {
+          "turn": 0,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n16"
+          }
+        },
+        {
+          "turn": 0,
+          "model_id": "Greedy_Explorer",
+          "event_type": "POINTS_COLLECTED",
+          "details": {
+            "points_node": "n29",
+            "points_awarded": 3
+          }
+        },
+        {
+          "turn": 0,
+          "model_id": "Shortest_Path",
+          "event_type": "CLUE_RECEIVED",
+          "details": {
+            "clue_node": "n16",
+            "revealed_node": "n8",
+            "revealed_type": "START"
+          }
+        },
+        {
+          "turn": 0,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CLUE_RECEIVED",
+          "details": {
+            "clue_node": "n16",
+            "revealed_node": "n0",
+            "revealed_type": "NORMAL"
+          }
+        },
+        {
+          "turn": 1,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n28"
+          }
+        },
+        {
+          "turn": 1,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n17"
+          }
+        },
+        {
+          "turn": 1,
+          "model_id": "Shortest_Path",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 1,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n13"
+          }
+        },
+        {
+          "turn": 1,
+          "model_id": "Random_Walker",
+          "event_type": "CLUE_RECEIVED",
+          "details": {
+            "clue_node": "n28",
+            "revealed_node": "n8",
+            "revealed_type": "START"
+          }
+        },
+        {
+          "turn": 1,
+          "model_id": "Greedy_Explorer",
+          "event_type": "POINTS_COLLECTED",
+          "details": {
+            "points_node": "n17",
+            "points_awarded": 10
+          }
+        },
+        {
+          "turn": 1,
+          "model_id": "Shortest_Path",
+          "event_type": "TRAP_RESPAWN_START",
+          "details": {
+            "trap_node": "n26",
+            "respawn_node": "n8",
+            "penalty": 10
+          }
+        },
+        {
+          "turn": 1,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n13"
+          }
+        },
+        {
+          "turn": 2,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n19"
+          }
+        },
+        {
+          "turn": 2,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n23"
+          }
+        },
+        {
+          "turn": 2,
+          "model_id": "Shortest_Path",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n29"
+          }
+        },
+        {
+          "turn": 2,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n16"
+          }
+        },
+        {
+          "turn": 2,
+          "model_id": "Random_Walker",
+          "event_type": "TRAP_RESPAWN_START",
+          "details": {
+            "trap_node": "n19",
+            "respawn_node": "n8",
+            "penalty": 10
+          }
+        },
+        {
+          "turn": 2,
+          "model_id": "Greedy_Explorer",
+          "event_type": "TRAP_RESPAWN_START",
+          "details": {
+            "trap_node": "n23",
+            "respawn_node": "n8",
+            "penalty": 10
+          }
+        },
+        {
+          "turn": 2,
+          "model_id": "Shortest_Path",
+          "event_type": "POINTS_COLLECTED",
+          "details": {
+            "points_node": "n29",
+            "points_awarded": 3
+          }
+        },
+        {
+          "turn": 2,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CLUE_RECEIVED",
+          "details": {
+            "clue_node": "n16",
+            "revealed_node": "n17",
+            "revealed_type": "POINTS"
+          }
+        },
+        {
+          "turn": 3,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 3,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n28"
+          }
+        },
+        {
+          "turn": 3,
+          "model_id": "Shortest_Path",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n15"
+          }
+        },
+        {
+          "turn": 3,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n13"
+          }
+        },
+        {
+          "turn": 3,
+          "model_id": "Random_Walker",
+          "event_type": "TRAP_RESPAWN_START",
+          "details": {
+            "trap_node": "n26",
+            "respawn_node": "n8",
+            "penalty": 10
+          }
+        },
+        {
+          "turn": 3,
+          "model_id": "Greedy_Explorer",
+          "event_type": "CLUE_RECEIVED",
+          "details": {
+            "clue_node": "n28",
+            "revealed_node": "n3",
+            "revealed_type": "TRAP"
+          }
+        },
+        {
+          "turn": 3,
+          "model_id": "Shortest_Path",
+          "event_type": "CLUE_RECEIVED",
+          "details": {
+            "clue_node": "n15",
+            "revealed_node": "n8",
+            "revealed_type": "START"
+          }
+        },
+        {
+          "turn": 3,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n13"
+          }
+        },
+        {
+          "turn": 4,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n15"
+          }
+        },
+        {
+          "turn": 4,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n18"
+          }
+        },
+        {
+          "turn": 4,
+          "model_id": "Shortest_Path",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n5"
+          }
+        },
+        {
+          "turn": 4,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n27"
+          }
+        },
+        {
+          "turn": 4,
+          "model_id": "Random_Walker",
+          "event_type": "CLUE_RECEIVED",
+          "details": {
+            "clue_node": "n15",
+            "revealed_node": "n25",
+            "revealed_type": "NORMAL"
+          }
+        },
+        {
+          "turn": 4,
+          "model_id": "Greedy_Explorer",
+          "event_type": "POINTS_COLLECTED",
+          "details": {
+            "points_node": "n18",
+            "points_awarded": 9
+          }
+        },
+        {
+          "turn": 5,
+          "model_id": "Shortest_Path",
+          "event_type": "GAME_FINISHED",
+          "details": {
+            "turns_taken": 5,
+            "final_score": 38
+          }
+        },
+        {
+          "turn": 5,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n28"
+          }
+        },
+        {
+          "turn": 5,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n24"
+          }
+        },
+        {
+          "turn": 5,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n13"
+          }
+        },
+        {
+          "turn": 5,
+          "model_id": "Random_Walker",
+          "event_type": "CLUE_RECEIVED",
+          "details": {
+            "clue_node": "n28",
+            "revealed_node": "n29",
+            "revealed_type": "POINTS"
+          }
+        },
+        {
+          "turn": 5,
+          "model_id": "Greedy_Explorer",
+          "event_type": "POINTS_COLLECTED",
+          "details": {
+            "points_node": "n24",
+            "points_awarded": 9
+          }
+        },
+        {
+          "turn": 5,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n13"
+          }
+        },
+        {
+          "turn": 6,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n29"
+          }
+        },
+        {
+          "turn": 6,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n1"
+          }
+        },
+        {
+          "turn": 6,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n27"
+          }
+        },
+        {
+          "turn": 6,
+          "model_id": "Random_Walker",
+          "event_type": "POINTS_COLLECTED",
+          "details": {
+            "points_node": "n29",
+            "points_awarded": 3
+          }
+        },
+        {
+          "turn": 6,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MAP_REVEALED",
+          "details": {
+            "map_node": "n1",
+            "depth": 2
+          }
+        },
+        {
+          "turn": 7,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n10"
+          }
+        },
+        {
+          "turn": 7,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n22"
+          }
+        },
+        {
+          "turn": 7,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n13"
+          }
+        },
+        {
+          "turn": 7,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n13"
+          }
+        },
+        {
+          "turn": 8,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n15"
+          }
+        },
+        {
+          "turn": 8,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n6"
+          }
+        },
+        {
+          "turn": 8,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n27"
+          }
+        },
+        {
+          "turn": 8,
+          "model_id": "Random_Walker",
+          "event_type": "CLUE_RECEIVED",
+          "details": {
+            "clue_node": "n15",
+            "revealed_node": "n8",
+            "revealed_type": "START"
+          }
+        },
+        {
+          "turn": 8,
+          "model_id": "Greedy_Explorer",
+          "event_type": "POINTS_COLLECTED",
+          "details": {
+            "points_node": "n6",
+            "points_awarded": 6
+          }
+        },
+        {
+          "turn": 9,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n0"
+          }
+        },
+        {
+          "turn": 9,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n3"
+          }
+        },
+        {
+          "turn": 9,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n13"
+          }
+        },
+        {
+          "turn": 9,
+          "model_id": "Greedy_Explorer",
+          "event_type": "TRAP_RESPAWN_START",
+          "details": {
+            "trap_node": "n3",
+            "respawn_node": "n8",
+            "penalty": 10
+          }
+        },
+        {
+          "turn": 9,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n13"
+          }
+        },
+        {
+          "turn": 10,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n28"
+          }
+        },
+        {
+          "turn": 10,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n15"
+          }
+        },
+        {
+          "turn": 10,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n16"
+          }
+        },
+        {
+          "turn": 10,
+          "model_id": "Random_Walker",
+          "event_type": "CLUE_RECEIVED",
+          "details": {
+            "clue_node": "n28",
+            "revealed_node": "n6",
+            "revealed_type": "POINTS"
+          }
+        },
+        {
+          "turn": 10,
+          "model_id": "Greedy_Explorer",
+          "event_type": "CLUE_RECEIVED",
+          "details": {
+            "clue_node": "n15",
+            "revealed_node": "n5",
+            "revealed_type": "END"
+          }
+        },
+        {
+          "turn": 10,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CLUE_RECEIVED",
+          "details": {
+            "clue_node": "n16",
+            "revealed_node": "n4",
+            "revealed_type": "CLUE"
+          }
+        },
+        {
+          "turn": 11,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n18"
+          }
+        },
+        {
+          "turn": 11,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n2"
+          }
+        },
+        {
+          "turn": 11,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n13"
+          }
+        },
+        {
+          "turn": 11,
+          "model_id": "Random_Walker",
+          "event_type": "POINTS_COLLECTED",
+          "details": {
+            "points_node": "n18",
+            "points_awarded": 9
+          }
+        },
+        {
+          "turn": 11,
+          "model_id": "Cautious_Navigator",
+          "event_type": "CHECKPOINT_ACTIVATED",
+          "details": {
+            "checkpoint_node": "n13"
+          }
+        },
+        {
+          "turn": 12,
+          "model_id": "Random_Walker",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n5"
+          }
+        },
+        {
+          "turn": 12,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n9"
+          }
+        },
+        {
+          "turn": 12,
+          "model_id": "Cautious_Navigator",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n5"
+          }
+        },
+        {
+          "turn": 13,
+          "model_id": "Random_Walker",
+          "event_type": "GAME_FINISHED",
+          "details": {
+            "turns_taken": 13,
+            "final_score": 29
+          }
+        },
+        {
+          "turn": 13,
+          "model_id": "Cautious_Navigator",
+          "event_type": "GAME_FINISHED",
+          "details": {
+            "turns_taken": 13,
+            "final_score": 37
+          }
+        },
+        {
+          "turn": 13,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n11"
+          }
+        },
+        {
+          "turn": 14,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 14,
+          "model_id": "Greedy_Explorer",
+          "event_type": "TRAP_RESPAWN_START",
+          "details": {
+            "trap_node": "n26",
+            "respawn_node": "n8",
+            "penalty": 10
+          }
+        },
+        {
+          "turn": 15,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n16"
+          }
+        },
+        {
+          "turn": 15,
+          "model_id": "Greedy_Explorer",
+          "event_type": "CLUE_RECEIVED",
+          "details": {
+            "clue_node": "n16",
+            "revealed_node": "n17",
+            "revealed_type": "POINTS"
+          }
+        },
+        {
+          "turn": 16,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 16,
+          "model_id": "Greedy_Explorer",
+          "event_type": "TRAP_RESPAWN_START",
+          "details": {
+            "trap_node": "n26",
+            "respawn_node": "n8",
+            "penalty": 10
+          }
+        },
+        {
+          "turn": 17,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n0"
+          }
+        },
+        {
+          "turn": 18,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n20"
+          }
+        },
+        {
+          "turn": 18,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MAP_REVEALED",
+          "details": {
+            "map_node": "n20",
+            "depth": 2
+          }
+        },
+        {
+          "turn": 19,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n10"
+          }
+        },
+        {
+          "turn": 20,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n19"
+          }
+        },
+        {
+          "turn": 20,
+          "model_id": "Greedy_Explorer",
+          "event_type": "TRAP_RESPAWN_START",
+          "details": {
+            "trap_node": "n19",
+            "respawn_node": "n8",
+            "penalty": 10
+          }
+        },
+        {
+          "turn": 21,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 21,
+          "model_id": "Greedy_Explorer",
+          "event_type": "TRAP_RESPAWN_START",
+          "details": {
+            "trap_node": "n26",
+            "respawn_node": "n8",
+            "penalty": 10
+          }
+        },
+        {
+          "turn": 22,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 22,
+          "model_id": "Greedy_Explorer",
+          "event_type": "TRAP_RESPAWN_START",
+          "details": {
+            "trap_node": "n26",
+            "respawn_node": "n8",
+            "penalty": 10
+          }
+        },
+        {
+          "turn": 23,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 23,
+          "model_id": "Greedy_Explorer",
+          "event_type": "TRAP_RESPAWN_START",
+          "details": {
+            "trap_node": "n26",
+            "respawn_node": "n8",
+            "penalty": 10
+          }
+        },
+        {
+          "turn": 24,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n26"
+          }
+        },
+        {
+          "turn": 24,
+          "model_id": "Greedy_Explorer",
+          "event_type": "TRAP_RESPAWN_START",
+          "details": {
+            "trap_node": "n26",
+            "respawn_node": "n8",
+            "penalty": 10
+          }
+        },
+        {
+          "turn": 25,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n4"
+          }
+        },
+        {
+          "turn": 25,
+          "model_id": "Greedy_Explorer",
+          "event_type": "CLUE_RECEIVED",
+          "details": {
+            "clue_node": "n4",
+            "revealed_node": "n8",
+            "revealed_type": "START"
+          }
+        },
+        {
+          "turn": 26,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n7"
+          }
+        },
+        {
+          "turn": 26,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MAP_REVEALED",
+          "details": {
+            "map_node": "n7",
+            "depth": 2
+          }
+        },
+        {
+          "turn": 27,
+          "model_id": "Greedy_Explorer",
+          "event_type": "MOVE",
+          "details": {
+            "target_node": "n5"
+          }
+        },
+        {
+          "turn": 28,
+          "model_id": "Greedy_Explorer",
+          "event_type": "GAME_FINISHED",
+          "details": {
+            "turns_taken": 28,
+            "final_score": -31
+          }
+        }
+      ]
+    }
+  }
+]

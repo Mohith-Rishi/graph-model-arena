@@ -1,0 +1,13 @@
+services:
+  arena:
+    build: .
+    volumes:
+      - ./game_results.json:/app/game_results.json
+    command: ["--num-models", "4", "--num-nodes", "30", "--max-turns", "50"]
+
+  test:
+    build: .
+    entrypoint: ["pytest"]
+    command: ["-v"]
+    profiles:
+      - testing

@@ -1,0 +1,7 @@
+.git
+.hypothesis
+.pytest_cache
+.kiro
+__pycache__
+*.pyc
+*.pyo

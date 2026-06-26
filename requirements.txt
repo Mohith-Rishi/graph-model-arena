@@ -1,0 +1,5 @@
+# Graph Model Arena - no external runtime dependencies (stdlib only)
+
+# Testing
+pytest>=7.0
+hypothesis>=6.0

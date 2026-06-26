@@ -218,3 +218,36 @@ class PostgresResultStore:
         # SELECT * FROM game_results ORDER BY timestamp DESC
         ...
 ```
+
+## Running with Docker
+
+Build and run using Docker Compose:
+
+```bash
+# Run a game with default settings
+docker compose up arena
+
+# Run with custom CLI options
+docker compose run arena --num-models 6 --num-nodes 80 --seed 42
+
+# Run the test suite
+docker compose --profile testing up test
+```
+
+Or use Docker directly:
+
+```bash
+# Build the image
+docker build -t graph-model-arena .
+
+# Run a game
+docker run --rm graph-model-arena
+
+# Run with options
+docker run --rm graph-model-arena --num-models 8 --max-turns 100
+
+# Run tests
+docker run --rm --entrypoint pytest graph-model-arena -v
+```
+
+Game results are persisted to the host via a volume mount in the Compose setup, so `game_results.json` stays updated between runs.
