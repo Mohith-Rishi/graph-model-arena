@@ -327,4 +327,17 @@ frontend/
 └── index.html
 ```
 
+### Running with Docker
+
+```bash
+# Build and start the frontend (serves on http://localhost:8080)
+docker compose --profile frontend up frontend
+
+# Or build standalone
+docker build -t graph-arena-frontend ./frontend
+docker run --rm -p 8080:80 graph-arena-frontend
+```
+
+The Docker setup uses a multi-stage build (Node for building, Nginx for serving) and optionally mounts your `game_results.json` into the served directory so you can access it directly at `http://localhost:8080/game_results.json`.
+
 The frontend has zero coupling to the Python backend — it only reads the `game_results.json` file format produced by the game engine.

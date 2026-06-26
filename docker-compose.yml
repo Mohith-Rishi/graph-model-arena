@@ -11,3 +11,12 @@ services:
     command: ["-v"]
     profiles:
       - testing
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    volumes:
+      - ./game_results.json:/usr/share/nginx/html/game_results.json:ro
+    profiles:
+      - frontend
