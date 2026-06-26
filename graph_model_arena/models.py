@@ -211,6 +211,18 @@ class GameSummary:
 
 
 # ---------------------------------------------------------------------------
+# Visible graph model
+# ---------------------------------------------------------------------------
+
+@dataclass
+class VisibleGraph:
+    """A filtered view of the graph containing only what a model can see."""
+    nodes: dict[str, Node] = field(default_factory=dict)
+    edges: list[Edge] = field(default_factory=list)
+    adjacency: dict[str, list[tuple[str, Edge]]] = field(default_factory=dict)
+
+
+# ---------------------------------------------------------------------------
 # Move / turn models
 # ---------------------------------------------------------------------------
 
@@ -223,6 +235,16 @@ class ModelView:
     turn_number: int = 0
     has_checkpoint: bool = False
     checkpoint_node: str | None = None
+
+    @dataclass
+    class VisibleGraph:
+        """A filtered view of the graph containing only what a model can see."""
+        nodes: dict[str, Node] = field(default_factory=dict)
+        edges: list[Edge] = field(default_factory=list)
+        adjacency: dict[str, list[tuple[str, Edge]]] = field(default_factory=dict)
+
+
+
 
 
 @dataclass

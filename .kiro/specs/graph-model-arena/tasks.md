@@ -43,14 +43,14 @@ Implement the Graph Model Arena in Python as a standalone package. Uses `datacla
     - **Property 5: Node types are validly assigned**
     - **Validates: Requirements 1.1, 1.2, 1.3, 1.4, 1.5, 1.6**
 
-- [ ] 3. Implement Visibility Manager and Score Manager
-  - [ ] 3.1 Implement `visibility_manager.py`
+- [x] 3. Implement Visibility Manager and Score Manager
+  - [x] 3.1 Implement `visibility_manager.py`
     - `initialize_visibility(model_id, graph, game_state) -> GameState` — set visibility to start node + neighbors
     - `expand_visibility(model_id, center_node, depth, game_state) -> GameState` — BFS expansion
     - `get_visible_graph(model_id, game_state) -> VisibleGraph` — filtered graph view
     - _Requirements: 3.1, 3.2, 3.3, 3.4, 3.5_
 
-  - [ ] 3.2 Implement `score_manager.py`
+  - [x] 3.2 Implement `score_manager.py`
     - `apply_points(model_state, node) -> ModelState` — add points on first visit only
     - `apply_completion_bonus(model_state, turns_taken, max_turns, multiplier) -> ModelState`
     - `apply_death_penalty(model_state, penalty) -> ModelState` — for trap respawn at start
@@ -68,7 +68,7 @@ Implement the Graph Model Arena in Python as a standalone package. Uses `datacla
     - **Validates: Requirements 5.5**
 
 - [ ] 4. Implement Node Effect Processor and Move Validator
-  - [ ] 4.1 Implement `node_effects.py` with `process_node_effect(model_state, node, game_state) -> ModelState`
+  - [x] 4.1 Implement `node_effects.py` with `process_node_effect(model_state, node, game_state) -> ModelState`
     - Process effects in order: checkpoint activation, trap check, clue reveal, map reveal, points collection
     - Trap without checkpoint: respawn at Starting_Node, apply death_penalty, increment trap_deaths, log TRAP_RESPAWN_START event
     - Trap with checkpoint: respawn at checkpoint, apply trap_respawn_penalty, increment trap_deaths, log TRAP_RESPAWN_CHECKPOINT event
@@ -78,7 +78,7 @@ Implement the Graph Model Arena in Python as a standalone package. Uses `datacla
     - Points: add points if first visit
     - _Requirements: 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7_
 
-  - [ ] 4.2 Implement `move_validator.py` with `validate_move(model_id, target_node, game_state) -> MoveResult`
+  - [x] 4.2 Implement `move_validator.py` with `validate_move(model_id, target_node, game_state) -> MoveResult`
     - Check adjacency and edge obstruction
     - Return valid/invalid with reason
     - _Requirements: 4.2_
@@ -95,18 +95,18 @@ Implement the Graph Model Arena in Python as a standalone package. Uses `datacla
     - **Property 15: Move validation correctness**
     - **Validates: Requirements 4.2**
 
-- [ ] 5. Checkpoint — Ensure all tests pass
+- [x] 5. Checkpoint — Ensure all tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
 - [ ] 6. Implement State Resolver and Turn Manager
-  - [ ] 6.1 Implement `state_resolver.py` with `resolve_moves(moves, game_state) -> GameState`
+  - [x] 6.1 Implement `state_resolver.py` with `resolve_moves(moves, game_state) -> GameState`
     - Move models to target nodes simultaneously
     - Call node effect processor for each model's new node
     - Expand visibility for each model (depth 1 from new position)
     - Handle trap respawn repositioning (checkpoint or Starting_Node)
     - _Requirements: 4.4, 2.1, 2.2_
 
-  - [ ] 6.2 Implement `turn_manager.py` with `execute_turn(game_state) -> GameState`
+  - [x] 6.2 Implement `turn_manager.py` with `execute_turn(game_state) -> GameState`
     - Collect moves from all active (non-finished) models with timeout
     - Validate each move via Move Validator
     - Apply invalid move penalty for bad moves
@@ -124,7 +124,7 @@ Implement the Graph Model Arena in Python as a standalone package. Uses `datacla
     - **Validates: Requirements 4.3, 4.4, 4.5, 4.6, 5.3**
 
 - [ ] 7. Implement Game Engine and Game Reporter
-  - [ ] 7.1 Implement `game_engine.py`
+  - [x] 7.1 Implement `game_engine.py`
     - `create_game(config: GameConfig) -> Game` — validate config, generate graph, initialize model states at Starting_Node
     - `start_game(game: Game) -> GameResult` — run turn loop, check end conditions each turn
     - End conditions: all models finished, or max turns reached
@@ -132,7 +132,7 @@ Implement the Graph Model Arena in Python as a standalone package. Uses `datacla
     - Record completion bonus when model reaches Ending_Node
     - _Requirements: 7.1, 7.2, 7.3, 7.4_
 
-  - [ ] 7.2 Implement `game_reporter.py`
+  - [x] 7.2 Implement `game_reporter.py`
     - `generate_summary(game) -> GameSummary` — include full graph, rankings, graph_stats, event_log
     - `serialize_game(game) -> dict` — JSON-serializable dict with full graph, all moves, scores, events
     - `deserialize_game(data: dict) -> GameState` — reconstruct game state from serialized data
@@ -147,16 +147,16 @@ Implement the Graph Model Arena in Python as a standalone package. Uses `datacla
     - **Property 26: Game state serialization round trip**
     - **Validates: Requirements 3.1, 5.1, 5.6, 6.3, 7.2, 7.3, 7.4, 7.5**
 
-- [ ] 8. Checkpoint — Ensure all tests pass
+- [x] 8. Checkpoint — Ensure all tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
 - [ ] 9. Implement Model Interface and 8 Built-in Strategies
-  - [ ] 9.1 Implement `model_interface.py` with abstract `ModelStrategy` base class
+  - [x] 9.1 Implement `model_interface.py` with abstract `ModelStrategy` base class
     - Abstract method `decide_move(self, state: ModelView) -> str`
     - Model registration and unique ID assignment
     - _Requirements: 6.1, 6.2, 6.3_
 
-  - [ ] 9.2 Implement 8 model strategies in `strategies/`
+  - [x] 9.2 Implement 8 model strategies in `strategies/`
     - `random_walker.py` — Random_Walker: pick random adjacent node
     - `greedy_explorer.py` — Greedy_Explorer: prioritize unvisited, move toward highest-value Points_Node
     - `shortest_path.py` — Shortest_Path: Dijkstra on visible graph toward Ending_Node
@@ -177,7 +177,7 @@ Implement the Graph Model Arena in Python as a standalone package. Uses `datacla
     - **Validates: Requirements 3.2, 3.5, 6.1**
 
 - [ ] 10. Wire everything together and integration test
-  - [ ] 10.1 Create `main.py` entry point
+  - [x] 10.1 Create `main.py` entry point
     - Accept game configuration (CLI args or defaults)
     - Create game, register models, run game, print summary
     - Serialize final game state to JSON file
@@ -190,7 +190,7 @@ Implement the Graph Model Arena in Python as a standalone package. Uses `datacla
     - Run a game that hits turn limit and verify proximity scoring
     - _Requirements: 2.1, 2.2, 7.3, 7.4_
 
-- [ ] 11. Final checkpoint — Ensure all tests pass
+- [x] 11. Final checkpoint — Ensure all tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
 ## Notes
